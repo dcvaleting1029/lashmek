@@ -13,6 +13,8 @@ import 'swiper/css/free-mode'
 /* ============ ASSETS ============ */
 const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
 const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/klsqu6ix_LASHMEK%26CO.%20-%20Logo%20%28Transparent%29.png'
+const HERO_BG_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/fxcgf4eh_8ea4a023-3443-41d6-8b02-99dad5db53b8.JPG'
+const SALON_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG'
 
 const IMG = {
   lash1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
@@ -25,8 +27,8 @@ const IMG = {
   lip3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/hxp3756g_WhatsApp%20Image%202026-02-24%20at%2021.52.56.jpeg',
   lip4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/9uze0f1n_IMG_4565.jpg',
   lip5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/p5zjagy2_IMG_4567.jpg',
-  salon1: 'https://images.unsplash.com/photo-1660505155761-fb440082f784?q=85&w=1400&auto=format',
-  salon2: 'https://images.pexels.com/photos/34930126/pexels-photo-34930126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
+  salon1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG',
+  salon2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG',
   skin1: 'https://images.unsplash.com/photo-1699206791200-414d95e68450?q=85&w=1200&auto=format',
   skin2: 'https://images.pexels.com/photos/15327092/pexels-photo-15327092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
   brow1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/7zca60sz_IMG_7340.jpg',
@@ -246,6 +248,14 @@ function Hero() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
+      {/* Salon background image */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img src={HERO_BG_URL} alt="" className="w-full h-full object-cover" />
+        {/* Layered overlays to ensure readability while preserving luxury feel */}
+        <div className="absolute inset-0 bg-[#F8F5F2]/82 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F2] via-[#F8F5F2]/70 to-[#F8F5F2]/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5F2]/40 via-transparent to-[#F8F5F2]/60" />
+      </div>
       {/* Background blobs */}
       <motion.div style={{ y: yShift }} className="absolute inset-0 pointer-events-none">
         <motion.div animate={{ x: [0, 30, 0], y: [0, -20, 0] }} transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }} className="gold-blob absolute -top-32 -left-20 w-[600px] h-[600px]" />

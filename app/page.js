@@ -15,6 +15,7 @@ const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/a
 const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/klsqu6ix_LASHMEK%26CO.%20-%20Logo%20%28Transparent%29.png'
 const HERO_BG_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/fxcgf4eh_8ea4a023-3443-41d6-8b02-99dad5db53b8.JPG'
 const SALON_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG'
+const FOUNDER_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/3l05f8sl_18ed7d92-cadf-4f50-9e4a-b11031cf0694.JPG'
 
 const IMG = {
   lash1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
@@ -582,7 +583,7 @@ function Founder() {
         <div className="lg:col-span-5 lg:order-1 order-2">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-10 h-px bg-[#B08968]" />
-            <span className="text-[10px] tracking-[0.32em] uppercase text-[#161616]/70">Founder — Mhairi K.</span>
+            <span className="text-[10px] tracking-[0.32em] uppercase text-[#161616]/70">Founder — Kirima</span>
           </div>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -594,7 +595,7 @@ function Founder() {
             A studio born from <span className="italic text-[#B08968]">obsession</span> with detail.
           </motion.h2>
           <p className="mt-8 text-[15px] leading-[1.8] text-[#161616]/75 max-w-md">
-            For over seven years, Mhairi has been refining the art of natural enhancement — building LashMeK&Co into one of Edinburgh's most respected names in luxury aesthetics, lashes and education.
+            For over seven years, Kirima has been refining the art of natural enhancement — building LashMeK&Co into one of Edinburgh's most respected names in luxury aesthetics, lashes and education.
           </p>
           <p className="mt-5 text-[15px] leading-[1.8] text-[#161616]/75 max-w-md">
             Every treatment is approached with the patience of a sculptor and the eye of an editor — quietly luxurious, deeply considered, always elevated.
@@ -607,7 +608,7 @@ function Founder() {
         <div className="lg:col-span-7 lg:order-2 order-1 relative">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px]">
             <motion.div style={{ scale, y }} className="absolute inset-0">
-              <img src={IMG.brow5} alt="Founder" className="w-full h-full object-cover" />
+              <img src={FOUNDER_URL} alt="Founder Kirima" className="w-full h-full object-cover" />
             </motion.div>
             <div className="absolute top-6 left-6 right-6 flex items-center justify-between text-[10px] tracking-[0.3em] uppercase text-white/90">
               <span>Est. 2018</span>

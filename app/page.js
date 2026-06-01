@@ -258,9 +258,9 @@ function Hero() {
         <motion.div animate={{ x: [0, 20, 0], y: [0, 40, 0] }} transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }} className="gold-blob absolute bottom-[-10%] left-1/4 w-[700px] h-[700px] opacity-50" />
       </motion.div>
 
-      <div className="relative max-w-[1500px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-6 items-center min-h-screen">
+      <div className="relative max-w-[1500px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16 flex flex-col justify-center min-h-screen">
         {/* LEFT — CONTENT */}
-        <div className="relative z-10 max-w-xl">
+        <div className="relative z-10 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -271,10 +271,12 @@ function Hero() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">Edinburgh Beauty • Aesthetics • Academy</span>
           </motion.div>
 
-          <h1 className="font-canela text-[52px] sm:text-[72px] md:text-[88px] leading-[1.05] tracking-[0.005em] font-medium text-[#161616]">
-            <span className="reveal-line"><SplitReveal delay={0.4}>BEAUTY</SplitReveal></span>{' '}
-            <span className="reveal-line"><SplitReveal delay={0.5} className="italic text-[#B08968]">&amp;</SplitReveal></span>{' '}
-            <span className="reveal-line"><SplitReveal delay={0.6}>AESTHETICS</SplitReveal></span>
+          <h1 className="font-canela font-bold text-[clamp(32px,7.6vw,124px)] leading-[1.0] tracking-[-0.025em] text-[#161616] whitespace-nowrap">
+            <span className="reveal-line">
+              <SplitReveal delay={0.4}>
+                BEAUTY <span className="italic font-medium text-[#B08968]">&amp;</span> AESTHETICS
+              </SplitReveal>
+            </span>
           </h1>
 
           <motion.p

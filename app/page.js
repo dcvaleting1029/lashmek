@@ -12,6 +12,7 @@ import 'swiper/css/free-mode'
 
 /* ============ ASSETS ============ */
 const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
+const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/klsqu6ix_LASHMEK%26CO.%20-%20Logo%20%28Transparent%29.png'
 
 const IMG = {
   lash1: 'https://images.pexels.com/photos/35013077/pexels-photo-35013077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
@@ -99,10 +100,10 @@ function Loader({ done }) {
               className="text-center flex flex-col items-center"
             >
               <img
-                src={LOGO_URL}
+                src={LOGO_NAV_URL}
                 alt="LashMeK&Co. Beauty Clinic"
-                className="w-[280px] md:w-[360px] h-auto"
-                style={{ filter: 'invert(1) brightness(1.1) contrast(1)' }}
+                className="w-[300px] md:w-[400px] h-auto"
+                style={{ filter: 'invert(1)' }}
               />
               <div className="mt-4 text-[10px] tracking-[0.4em] text-[#C9A88D] uppercase">Edinburgh — Est. 2018</div>
             </motion.div>
@@ -181,7 +182,7 @@ function Nav() {
     <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${scrolled ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
         <a href="#" data-cursor="Home" className="flex items-center gap-3 group">
-          <img src={LOGO_URL} alt="LashMeK&Co. Beauty Clinic" className="h-10 md:h-12 w-auto" />
+          <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-12 md:h-14 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-10">
           {NAV.map((n) => (
@@ -993,7 +994,7 @@ function Footer() {
       <div className="max-w-[1500px] mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10 pb-16 border-b border-[#C9A88D]/20">
           <div className="md:col-span-5">
-            <img src={LOGO_URL} alt="LashMeK&Co. Beauty Clinic" className="h-14 md:h-16 w-auto" style={{ filter: 'invert(1)' }} />
+            <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-16 md:h-20 w-auto" style={{ filter: 'invert(1)' }} />
             <p className="mt-6 text-[15px] text-[#F8F5F2]/65 max-w-sm">A luxury beauty clinic in the heart of Edinburgh — treatments, aesthetics and academy.</p>
           </div>
           <div className="md:col-span-3">

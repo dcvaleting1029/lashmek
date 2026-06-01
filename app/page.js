@@ -20,9 +20,11 @@ const IMG = {
   lash3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/cuy7pnvq_IMG_4523.jpg',
   lash4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1aopwdgc_IMG_4521.jpg',
   lash5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1rhavp2k_IMG_4522.jpg',
-  lip1: 'https://images.unsplash.com/photo-1571646034638-441726ee3a9a?q=85&w=1200&auto=format',
-  lip2: 'https://images.pexels.com/photos/9157201/pexels-photo-9157201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
-  lip3: 'https://images.pexels.com/photos/27666913/pexels-photo-27666913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
+  lip1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/xw3hscey_WhatsApp%20Image%202026-02-24%20at%2021.52.54.jpeg',
+  lip2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/w6o9qvyz_WhatsApp%20Image%202026-02-24%20at%2021.52.50.jpeg',
+  lip3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/hxp3756g_WhatsApp%20Image%202026-02-24%20at%2021.52.56.jpeg',
+  lip4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/9uze0f1n_IMG_4565.jpg',
+  lip5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/p5zjagy2_IMG_4567.jpg',
   salon1: 'https://images.unsplash.com/photo-1660505155761-fb440082f784?q=85&w=1400&auto=format',
   salon2: 'https://images.pexels.com/photos/34930126/pexels-photo-34930126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
   skin1: 'https://images.unsplash.com/photo-1699206791200-414d95e68450?q=85&w=1200&auto=format',
@@ -44,7 +46,7 @@ const HERO_CAROUSEL = [
 
 const FLOAT_CARDS = [
   { src: IMG.lash1, label: 'Lash Extensions', cls: 'top-[4%] left-[2%] w-[28%] aspect-[3/4]', speed: 0.4, dx: 1, dy: -1, rot: -4, delay: 0.2 },
-  { src: IMG.lip2, label: 'Lip Enhancements', cls: 'top-[58%] left-[6%] w-[24%] aspect-[3/4]', speed: 0.7, dx: -1, dy: 1, rot: 5, delay: 0.4 },
+  { src: IMG.lip3, label: 'Lip Enhancements', cls: 'top-[58%] left-[6%] w-[24%] aspect-[3/4]', speed: 0.7, dx: -1, dy: 1, rot: 5, delay: 0.4 },
   { src: IMG.skin2, label: 'Skin Treatments', cls: 'top-[6%] right-[3%] w-[26%] aspect-[3/4]', speed: 0.5, dx: -1, dy: -1, rot: 6, delay: 0.6 },
   { src: IMG.lash2, label: 'Brow Treatments', cls: 'top-[62%] right-[8%] w-[22%] aspect-[3/4]', speed: 0.6, dx: 1, dy: 1, rot: -5, delay: 0.8 },
   { src: IMG.salon1, label: 'Salon Interior', cls: 'bottom-[2%] left-[40%] w-[20%] aspect-square', speed: 0.3, dx: 0, dy: 1, rot: 2, delay: 1.0 }
@@ -55,7 +57,7 @@ const TREATMENTS = [
   { title: 'Lash Lift', desc: 'A natural elevation. Soft curl, defined finish, lasting weeks.', img: IMG.lash2, n: '02' },
   { title: 'Brows', desc: 'Sculpted, defined and tailored to your bone structure.', img: IMG.portrait3, n: '03' },
   { title: 'Skin Treatments', desc: 'Advanced rituals for clarity, hydration and radiance.', img: IMG.skin1, n: '04' },
-  { title: 'Aesthetics', desc: 'Precision lip enhancements and refined facial aesthetics.', img: IMG.lip1, n: '05' },
+  { title: 'Aesthetics', desc: 'Precision lip enhancements and refined facial aesthetics.', img: IMG.lip5, n: '05' },
   { title: 'Academy', desc: 'Train with elite mentors. Industry-leading certification.', img: IMG.salon2, n: '06' }
 ]
 
@@ -806,7 +808,7 @@ function Academy() {
   const cards = [
     { title: 'Foundation Lash', desc: '4-day intensive in classic lash artistry with one-to-one mentorship.', img: IMG.lash3 },
     { title: 'Advanced Volume', desc: 'Master Russian volume techniques, mapping & retention science.', img: IMG.lash4 },
-    { title: 'Aesthetic Masterclass', desc: 'Lip enhancement, anatomy and advanced injection techniques.', img: IMG.lip1 }
+    { title: 'Aesthetic Masterclass', desc: 'Lip enhancement, anatomy and advanced injection techniques.', img: IMG.lip2 }
   ]
   return (
     <section id="academy" className="bg-[#161616] text-[#F8F5F2] py-28 md:py-36 relative overflow-hidden">
@@ -863,7 +865,7 @@ function InstagramFeed() {
     { src: IMG.skin1, span: 'col-span-2' },
     { src: IMG.salon1, span: 'row-span-2' },
     { src: IMG.lash4, span: '' },
-    { src: IMG.lip1, span: '' },
+    { src: IMG.lip5, span: '' },
     { src: IMG.lash5, span: 'col-span-2' }
   ]
   return (

@@ -449,7 +449,7 @@ function Treatments() {
               <span className="w-10 h-px bg-[#C9A88D]" />
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">The Treatments</span>
             </div>
-            <h2 className="font-canela font-bold uppercase text-[42px] md:text-[68px] leading-[1.02] tracking-[-0.02em] text-[#161616] max-w-3xl">
+            <h2 className="font-canela font-bold uppercase text-[36px] md:text-[68px] leading-[1.02] tracking-[-0.02em] text-[#161616] max-w-3xl">
               Perfected by <span className="italic font-medium text-[#B08968]">us.</span>
             </h2>
           </div>
@@ -517,7 +517,7 @@ function Founder() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="font-canela font-bold uppercase text-[44px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]"
+            className="font-canela font-bold uppercase text-[38px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]"
           >
             About <span className="italic font-medium text-[#B08968]">Kirima</span>
           </motion.h2>
@@ -636,7 +636,7 @@ function Results() {
               <span className="w-10 h-px bg-[#C9A88D]" />
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">Results</span>
             </div>
-            <h2 className="font-canela font-bold uppercase text-[42px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]">
+            <h2 className="font-canela font-bold uppercase text-[32px] sm:text-[42px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]">
               Transformations
             </h2>
           </div>
@@ -679,7 +679,7 @@ function VideoSection() {
         >
           <Play size={26} fill="#F8F5F2" />
         </motion.button>
-        <h2 className="mt-10 font-canela font-bold uppercase text-[44px] md:text-[78px] text-[#F8F5F2] leading-[1] tracking-[-0.02em] max-w-4xl">
+        <h2 className="mt-10 font-canela font-bold uppercase text-[38px] md:text-[78px] text-[#F8F5F2] leading-[1] tracking-[-0.02em] max-w-4xl">
           Luxury in <span className="italic font-medium text-[#C9A88D]">every</span> detail.
         </h2>
         <div className="mt-6 text-[11px] tracking-[0.3em] uppercase text-[#C9A88D]">LashMeK&Co — A Beauty Film</div>
@@ -699,7 +699,7 @@ function Testimonials() {
           <span className="w-10 h-px bg-[#C9A88D]" />
           <span className="text-[10px] tracking-[0.32em] uppercase text-[#C9A88D]">Voices</span>
         </div>
-        <h2 className="font-canela font-bold uppercase text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] mb-14 max-w-4xl">
+        <h2 className="font-canela font-bold uppercase text-[34px] md:text-[60px] leading-[1.05] tracking-[-0.02em] mb-14 max-w-4xl">
           Loved by clients <span className="italic font-medium text-[#C9A88D]">across</span> Edinburgh
         </h2>
         <Swiper
@@ -757,7 +757,7 @@ function Academy() {
               <span className="w-10 h-px bg-[#C9A88D]" />
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#C9A88D]">Education</span>
             </div>
-            <h2 className="font-canela font-bold uppercase text-[44px] md:text-[78px] leading-[0.98] tracking-[-0.02em]">
+            <h2 className="font-canela font-bold uppercase text-[40px] md:text-[78px] leading-[1.0] tracking-[-0.02em]">
               LashMeK <span className="italic font-medium text-[#C9A88D]">Academy</span>
             </h2>
           </div>
@@ -850,7 +850,7 @@ function FAQ() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-[#161616]/70">FAQ</span>
             <span className="w-10 h-px bg-[#B08968]" />
           </div>
-          <h2 className="font-canela font-bold uppercase text-[42px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]">
+          <h2 className="font-canela font-bold uppercase text-[36px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]">
             Questions, <span className="italic font-medium text-[#B08968]">answered</span>
           </h2>
         </div>
@@ -911,7 +911,7 @@ function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.1 }}
-          className="font-canela font-bold uppercase text-[48px] md:text-[88px] leading-[0.98] tracking-[-0.02em] max-w-5xl"
+          className="font-canela font-bold uppercase text-[42px] md:text-[88px] leading-[1.02] tracking-[-0.02em] max-w-5xl"
         >
           Your beauty <span className="italic font-medium text-[#C9A88D]">journey</span> starts here.
         </motion.h2>

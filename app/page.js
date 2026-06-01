@@ -449,8 +449,8 @@ function Treatments() {
               <span className="w-10 h-px bg-[#C9A88D]" />
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">The Treatments</span>
             </div>
-            <h2 className="font-canela text-[42px] md:text-[68px] leading-[1.02] tracking-[-0.01em] text-[#161616] max-w-3xl">
-              Designed for <span className="italic text-[#B08968]">you.</span> Perfected by us.
+            <h2 className="font-canela font-bold uppercase text-[42px] md:text-[68px] leading-[1.02] tracking-[-0.02em] text-[#161616] max-w-3xl">
+              Perfected by <span className="italic font-medium text-[#B08968]">us.</span>
             </h2>
           </div>
           <p className="text-[14px] text-[#161616]/60 max-w-xs">A curated suite of treatments — each handcrafted, considered and elevated to luxury standard.</p>
@@ -517,9 +517,9 @@ function Founder() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="font-canela text-[44px] md:text-[64px] leading-[1.02] tracking-[-0.01em] text-[#161616]"
+            className="font-canela font-bold uppercase text-[44px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]"
           >
-            A studio born from <span className="italic text-[#B08968]">obsession</span> with detail.
+            About <span className="italic font-medium text-[#B08968]">Kirima</span>
           </motion.h2>
           <p className="mt-8 text-[15px] leading-[1.8] text-[#161616]/75 max-w-md">
             For over seven years, Kirima has been refining the art of natural enhancement — building LashMeK&Co into one of Edinburgh's most respected names in luxury aesthetics, lashes and education.
@@ -636,8 +636,8 @@ function Results() {
               <span className="w-10 h-px bg-[#C9A88D]" />
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">Results</span>
             </div>
-            <h2 className="font-canela text-[42px] md:text-[64px] leading-[1.02] text-[#161616]">
-              The art of <span className="italic text-[#B08968]">transformation.</span>
+            <h2 className="font-canela font-bold uppercase text-[42px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]">
+              Transformations
             </h2>
           </div>
           <div className="flex gap-2 text-[11px] tracking-[0.2em] uppercase text-[#161616]/60">
@@ -679,8 +679,8 @@ function VideoSection() {
         >
           <Play size={26} fill="#F8F5F2" />
         </motion.button>
-        <h2 className="mt-10 font-canela text-[44px] md:text-[78px] text-[#F8F5F2] leading-[1] tracking-[-0.01em] max-w-4xl">
-          Luxury in <span className="italic text-[#C9A88D]">every</span> detail.
+        <h2 className="mt-10 font-canela font-bold uppercase text-[44px] md:text-[78px] text-[#F8F5F2] leading-[1] tracking-[-0.02em] max-w-4xl">
+          Luxury in <span className="italic font-medium text-[#C9A88D]">every</span> detail.
         </h2>
         <div className="mt-6 text-[11px] tracking-[0.3em] uppercase text-[#C9A88D]">LashMeK&Co — A Beauty Film</div>
       </div>
@@ -699,8 +699,8 @@ function Testimonials() {
           <span className="w-10 h-px bg-[#C9A88D]" />
           <span className="text-[10px] tracking-[0.32em] uppercase text-[#C9A88D]">Voices</span>
         </div>
-        <h2 className="font-canela text-[42px] md:text-[64px] leading-[1.02] mb-14 max-w-3xl">
-          Loved by clients <span className="italic text-[#C9A88D]">across</span> Edinburgh.
+        <h2 className="font-canela font-bold uppercase text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] mb-14 max-w-4xl">
+          Loved by clients <span className="italic font-medium text-[#C9A88D]">across</span> Edinburgh
         </h2>
         <Swiper
           modules={[Autoplay, FreeMode, Pagination]}
@@ -757,8 +757,8 @@ function Academy() {
               <span className="w-10 h-px bg-[#C9A88D]" />
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#C9A88D]">Education</span>
             </div>
-            <h2 className="font-canela text-[44px] md:text-[78px] leading-[0.98] tracking-[-0.01em]">
-              Train with <span className="italic text-[#C9A88D]">LashMeK</span> Academy.
+            <h2 className="font-canela font-bold uppercase text-[44px] md:text-[78px] leading-[0.98] tracking-[-0.02em]">
+              LashMeK <span className="italic font-medium text-[#C9A88D]">Academy</span>
             </h2>
           </div>
           <p className="text-[15px] leading-[1.8] text-[#F8F5F2]/70 max-w-md">
@@ -850,8 +850,8 @@ function FAQ() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-[#161616]/70">FAQ</span>
             <span className="w-10 h-px bg-[#B08968]" />
           </div>
-          <h2 className="font-canela text-[42px] md:text-[64px] leading-[1.02] text-[#161616]">
-            Questions, <span className="italic text-[#B08968]">answered.</span>
+          <h2 className="font-canela font-bold uppercase text-[42px] md:text-[64px] leading-[1.02] tracking-[-0.02em] text-[#161616]">
+            Questions, <span className="italic font-medium text-[#B08968]">answered</span>
           </h2>
         </div>
         <div className="divide-y divide-[#B08968]/30 border-t border-b border-[#B08968]/30">
@@ -911,9 +911,9 @@ function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.1 }}
-          className="font-canela text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.01em] max-w-5xl"
+          className="font-canela font-bold uppercase text-[48px] md:text-[88px] leading-[0.98] tracking-[-0.02em] max-w-5xl"
         >
-          Your beauty <span className="italic text-[#C9A88D]">journey</span> starts here.
+          Your beauty <span className="italic font-medium text-[#C9A88D]">journey</span> starts here.
         </motion.h2>
         <p className="mt-8 text-[14px] md:text-[15px] text-[#F8F5F2]/70 max-w-lg">Reserve your place. Spaces are limited and curated for an intimate experience.</p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

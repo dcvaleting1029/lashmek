@@ -271,7 +271,7 @@ function Hero() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">Edinburgh Beauty • Aesthetics • Academy</span>
           </motion.div>
 
-          <h1 className="font-canela font-bold text-[clamp(32px,7.6vw,124px)] leading-[1.0] tracking-[-0.025em] text-[#161616] whitespace-nowrap">
+          <h1 className="font-canela font-bold text-[clamp(24px,7vw,116px)] leading-[1.0] tracking-[-0.025em] text-[#161616] whitespace-nowrap">
             <span className="reveal-line">
               <SplitReveal delay={0.4}>
                 BEAUTY <span className="italic font-medium text-[#B08968]">&amp;</span> AESTHETICS

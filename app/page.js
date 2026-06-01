@@ -491,43 +491,30 @@ function Marquee() {
 
 /* Treatments — Horizontal scroll */
 function Treatments() {
-  const pinRef = useRef(null)
-  const trackRef = useRef(null)
+  const scrollerRef = useRef(null)
 
+  // Convert vertical mouse wheel to horizontal scroll while hovering the row
   useEffect(() => {
-    let gsap, ScrollTrigger, ctx
-    let cleanup = () => {}
-    ;(async () => {
-      gsap = (await import('gsap')).default
-      ScrollTrigger = (await import('gsap/ScrollTrigger')).default
-      gsap.registerPlugin(ScrollTrigger)
-      const sec = pinRef.current
-      const track = trackRef.current
-      if (!sec || !track) return
-      ctx = gsap.context(() => {
-        const dist = track.scrollWidth - window.innerWidth + 80
-        gsap.to(track, {
-          x: -dist,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: sec,
-            start: 'top top',
-            end: () => `+=${dist}`,
-            pin: true,
-            scrub: 1,
-            anticipatePin: 1,
-            invalidateOnRefresh: true
-          }
-        })
-      }, sec)
-      cleanup = () => ctx.revert()
-    })()
-    return () => cleanup()
+    const el = scrollerRef.current
+    if (!el) return
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return
+      // only intercept if there's room to scroll horizontally
+      const max = el.scrollWidth - el.clientWidth
+      if (max <= 0) return
+      const next = el.scrollLeft + e.deltaY
+      if ((e.deltaY > 0 && el.scrollLeft < max) || (e.deltaY < 0 && el.scrollLeft > 0)) {
+        e.preventDefault()
+        el.scrollLeft = next
+      }
+    }
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
   }, [])
 
   return (
     <section id="treatments" className="relative bg-[#F8F5F2]">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 pt-28 pb-16">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 pt-28 pb-12">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -542,10 +529,23 @@ function Treatments() {
         </div>
       </div>
 
-      <div ref={pinRef} className="relative h-screen overflow-hidden">
-        <div ref={trackRef} className="absolute top-1/2 -translate-y-1/2 flex gap-6 pl-10 will-change-transform">
+      <div
+        ref={scrollerRef}
+        data-cursor="Drag"
+        className="no-scrollbar overflow-x-auto overscroll-x-contain pb-16 pl-6 md:pl-10 pr-6 md:pr-10 snap-x snap-mandatory scroll-smooth"
+        style={{ WebkitOverflowScrolling: 'touch' }}
+      >
+        <div className="flex gap-6 w-max">
           {TREATMENTS.map((t, i) => (
-            <div key={i} data-cursor="View Treatment" className="shrink-0 w-[80vw] sm:w-[60vw] md:w-[44vw] lg:w-[34vw] aspect-[3/4] relative rounded-[18px] overflow-hidden group">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.9, delay: (i % 3) * 0.1, ease: [0.2, 0.7, 0.2, 1] }}
+              data-cursor="View Treatment"
+              className="shrink-0 w-[78vw] sm:w-[55vw] md:w-[40vw] lg:w-[30vw] aspect-[3/4] relative rounded-[18px] overflow-hidden group snap-start"
+            >
               <img src={t.img} alt={t.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
               <div className="absolute top-6 left-6 text-[10px] tracking-[0.3em] uppercase text-[#C9A88D]">{t.n}</div>
@@ -560,12 +560,11 @@ function Treatments() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-          <div className="shrink-0 w-[20vw] aspect-[3/4]" />
         </div>
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.3em] uppercase text-[#161616]/50">Scroll to Explore →</div>
       </div>
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 pb-20 text-[10px] tracking-[0.3em] uppercase text-[#161616]/50">← Drag or scroll to explore →</div>
     </section>
   )
 }

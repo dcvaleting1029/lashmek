@@ -48,11 +48,10 @@ const HERO_CAROUSEL = [
 ]
 
 const FLOAT_CARDS = [
-  { src: IMG.lash1, label: 'Lash Extensions', cls: 'top-[4%] left-[2%] w-[28%] aspect-[3/4]', speed: 0.4, dx: 1, dy: -1, rot: -4, delay: 0.2 },
-  { src: IMG.lip3, label: 'Lip Enhancements', cls: 'top-[58%] left-[6%] w-[24%] aspect-[3/4]', speed: 0.7, dx: -1, dy: 1, rot: 5, delay: 0.4 },
-  { src: IMG.lip4, label: 'Skin Treatments', cls: 'top-[6%] right-[3%] w-[26%] aspect-[3/4]', speed: 0.5, dx: -1, dy: -1, rot: 6, delay: 0.6 },
-  { src: IMG.lash2, label: 'Brow Treatments', cls: 'top-[62%] right-[8%] w-[22%] aspect-[3/4]', speed: 0.6, dx: 1, dy: 1, rot: -5, delay: 0.8 },
-  { src: IMG.salon1, label: 'Salon Interior', cls: 'bottom-[2%] left-[40%] w-[20%] aspect-square', speed: 0.3, dx: 0, dy: 1, rot: 2, delay: 1.0 }
+  { src: IMG.lash1, label: 'Lash Extensions', cls: 'top-[3%] left-[0%] w-[27%] aspect-[3/4]', dx: 1, dy: -1, rot: -2, delay: 0.2 },
+  { src: IMG.brow3, label: 'Brow Treatments', cls: 'top-[3%] right-[0%] w-[27%] aspect-[3/4]', dx: -1, dy: -1, rot: 2, delay: 0.4 },
+  { src: IMG.lip3, label: 'Lip Enhancements', cls: 'bottom-[3%] left-[0%] w-[27%] aspect-[3/4]', dx: -1, dy: 1, rot: 2, delay: 0.6 },
+  { src: IMG.lip5, label: 'Aesthetics', cls: 'bottom-[3%] right-[0%] w-[27%] aspect-[3/4]', dx: 1, dy: 1, rot: -2, delay: 0.8 }
 ]
 
 const TREATMENTS = [
@@ -272,11 +271,10 @@ function Hero() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">Edinburgh Beauty • Aesthetics • Academy</span>
           </motion.div>
 
-          <h1 className="font-canela text-[44px] sm:text-[58px] md:text-[72px] leading-[1.08] tracking-[0.005em] text-[#161616]">
-            <span className="reveal-line"><SplitReveal delay={0.4}>Elevating</SplitReveal></span>{' '}
-            <span className="reveal-line"><SplitReveal delay={0.5} className="italic text-[#B08968]">Natural Beauty</SplitReveal></span>{' '}
-            <span className="reveal-line"><SplitReveal delay={0.6}>Through Luxury</SplitReveal></span>{' '}
-            <span className="reveal-line"><SplitReveal delay={0.7}>Treatments.</SplitReveal></span>
+          <h1 className="font-canela text-[52px] sm:text-[72px] md:text-[88px] leading-[1.05] tracking-[0.005em] font-medium text-[#161616]">
+            <span className="reveal-line"><SplitReveal delay={0.4}>BEAUTY</SplitReveal></span>{' '}
+            <span className="reveal-line"><SplitReveal delay={0.5} className="italic text-[#B08968]">&amp;</SplitReveal></span>{' '}
+            <span className="reveal-line"><SplitReveal delay={0.6}>AESTHETICS</SplitReveal></span>
           </h1>
 
           <motion.p

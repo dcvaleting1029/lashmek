@@ -317,80 +317,8 @@ function Hero() {
           </motion.div>
         </div>
 
-        {/* RIGHT — FLOATING IMAGE STAGE (desktop only) */}
-        <div ref={stageRef} className="hero-stage relative h-[80vh] lg:h-[88vh] w-full hidden lg:block">
-          {/* Center auto-carousel card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.82 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.3, delay: 1.0, ease: [0.2, 0.7, 0.2, 1] }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] aspect-[3/4] z-10 rounded-[20px] overflow-hidden float-card"
-            style={{
-              transform: `translate(-50%, -50%) translate3d(${mouse.x * -30}px, ${mouse.y * -30}px, 0) rotateY(${mouse.x * 6}deg) rotateX(${mouse.y * -6}deg)`
-            }}
-          >
-            <Swiper
-              modules={[Autoplay, EffectFade]}
-              effect="fade"
-              fadeEffect={{ crossFade: true }}
-              loop
-              speed={1400}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              className="w-full h-full"
-            >
-              {HERO_CAROUSEL.map((c, i) => (
-                <SwiperSlide key={i}>
-                  <motion.div
-                    initial={{ scale: 1.1 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 4.2, ease: 'easeOut' }}
-                    className="w-full h-full"
-                    key={i}
-                  >
-                    <img src={c.src} alt={c.label} className="w-full h-full object-cover" />
-                    <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                      <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D]">Featured</div>
-                      <div className="font-canela text-white text-xl mt-1">{c.label}</div>
-                    </div>
-                  </motion.div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </motion.div>
-
-          {/* Floating cards */}
-          {FLOAT_CARDS.map((c, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.8, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1.2, delay: c.delay, ease: [0.2, 0.7, 0.2, 1] }}
-              className={`absolute ${c.cls} rounded-[14px] overflow-hidden float-card`}
-              data-cursor="View Treatment"
-              style={{
-                transform: `translate3d(${mouse.x * 50 * c.dx}px, ${mouse.y * 50 * c.dy}px, 0) rotateZ(${c.rot + mouse.x * 4 * c.dx}deg)`
-              }}
-            >
-              <motion.div
-                animate={{ y: [0, -14, 0] }}
-                transition={{ duration: 5 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
-                className="w-full h-full"
-              >
-                <img src={c.src} alt={c.label} className="w-full h-full object-cover" />
-                <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between px-2 py-1.5 rounded-full bg-[#F8F5F2]/85 backdrop-blur-sm">
-                  <span className="text-[9px] tracking-[0.18em] uppercase text-[#161616]">{c.label}</span>
-                  <ArrowUpRight size={11} className="text-[#B08968]" />
-                </div>
-              </motion.div>
-            </motion.div>
-          ))}
-
-          {/* Decorative arc */}
-          <svg className="absolute -bottom-10 -right-10 w-72 h-72 opacity-20" viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="90" fill="none" stroke="#C9A88D" strokeWidth="0.5" />
-            <circle cx="100" cy="100" r="70" fill="none" stroke="#C9A88D" strokeWidth="0.5" />
-          </svg>
-        </div>
+        {/* RIGHT — Empty stage (salon background shows through) */}
+        <div className="hidden lg:block" />
       </div>
 
       {/* Scroll cue */}

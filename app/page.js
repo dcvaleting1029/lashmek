@@ -29,6 +29,11 @@ const IMG = {
   salon2: 'https://images.pexels.com/photos/34930126/pexels-photo-34930126.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
   skin1: 'https://images.unsplash.com/photo-1699206791200-414d95e68450?q=85&w=1200&auto=format',
   skin2: 'https://images.pexels.com/photos/15327092/pexels-photo-15327092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
+  brow1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/7zca60sz_IMG_7340.jpg',
+  brow2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/n6e51kj5_IMG_7342.jpg',
+  brow3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/4u2zm95m_IMG_7339.jpg',
+  brow4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/oz4l8hu1_IMG_7343.jpg',
+  brow5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/aihyjdjt_IMG_7341.jpg',
   portrait1: 'https://images.unsplash.com/photo-1584464441663-3d23cb39b041?q=85&w=1400&auto=format',
   portrait2: 'https://images.unsplash.com/photo-1646601940597-b73ffee83d6d?q=85&w=1400&auto=format',
   portrait3: 'https://images.pexels.com/photos/17274037/pexels-photo-17274037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1200'
@@ -37,10 +42,10 @@ const IMG = {
 const HERO_CAROUSEL = [
   { src: IMG.lash3, label: 'Lash Results' },
   { src: IMG.lip1, label: 'Lip Enhancement' },
-  { src: IMG.lash5, label: 'Brow Sculpt' },
+  { src: IMG.brow1, label: 'Brow Sculpt' },
   { src: IMG.skin1, label: 'Skin Renewal' },
   { src: IMG.lash1, label: 'Hybrid Set' },
-  { src: IMG.portrait2, label: 'Client Portrait' },
+  { src: IMG.brow3, label: 'Brow Lamination' },
   { src: IMG.salon1, label: 'Academy Training' }
 ]
 
@@ -55,7 +60,7 @@ const FLOAT_CARDS = [
 const TREATMENTS = [
   { title: 'Lash Extensions', desc: 'Hand-mapped, weightless lashes designed to your eye shape.', img: IMG.lash1, n: '01' },
   { title: 'Lash Lift', desc: 'A natural elevation. Soft curl, defined finish, lasting weeks.', img: IMG.lash2, n: '02' },
-  { title: 'Brows', desc: 'Sculpted, defined and tailored to your bone structure.', img: IMG.portrait3, n: '03' },
+  { title: 'Brows', desc: 'Sculpted, defined and tailored to your bone structure.', img: IMG.brow3, n: '03' },
   { title: 'Skin Treatments', desc: 'Advanced rituals for clarity, hydration and radiance.', img: IMG.skin1, n: '04' },
   { title: 'Aesthetics', desc: 'Precision lip enhancements and refined facial aesthetics.', img: IMG.lip5, n: '05' },
   { title: 'Academy', desc: 'Train with elite mentors. Industry-leading certification.', img: IMG.salon2, n: '06' }
@@ -65,7 +70,7 @@ const RESULTS = [
   { before: IMG.lip2, after: IMG.lip1, name: 'Russian Lip', cat: 'Lips' },
   { before: IMG.portrait3, after: IMG.lash1, name: 'Volume Set', cat: 'Lashes' },
   { before: IMG.skin2, after: IMG.skin1, name: 'Skin Renewal', cat: 'Skin' },
-  { before: IMG.portrait2, after: IMG.lash2, name: 'Brow Lamination', cat: 'Brows' }
+  { before: IMG.brow4, after: IMG.brow5, name: 'Brow Lamination', cat: 'Brows' }
 ]
 
 const TESTIMONIALS = [
@@ -866,7 +871,7 @@ function InstagramFeed() {
     { src: IMG.salon1, span: 'row-span-2' },
     { src: IMG.lash4, span: '' },
     { src: IMG.lip5, span: '' },
-    { src: IMG.lash5, span: 'col-span-2' }
+    { src: IMG.brow2, span: 'col-span-2' }
   ]
   return (
     <section className="py-28 md:py-36 bg-[#F8F5F2]">
@@ -1084,3 +1089,4 @@ function App() {
 }
 
 export default App
+App

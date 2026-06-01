@@ -15,8 +15,11 @@ const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/a
 const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/klsqu6ix_LASHMEK%26CO.%20-%20Logo%20%28Transparent%29.png'
 
 const IMG = {
-  lash1: 'https://images.pexels.com/photos/35013077/pexels-photo-35013077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
-  lash2: 'https://images.pexels.com/photos/36930354/pexels-photo-36930354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
+  lash1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
+  lash2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/acuiurcs_f0757d96-9e0f-411b-9043-5e8eef7cd0f5.jpg',
+  lash3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/cuy7pnvq_IMG_4523.jpg',
+  lash4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1aopwdgc_IMG_4521.jpg',
+  lash5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1rhavp2k_IMG_4522.jpg',
   lip1: 'https://images.unsplash.com/photo-1571646034638-441726ee3a9a?q=85&w=1200&auto=format',
   lip2: 'https://images.pexels.com/photos/9157201/pexels-photo-9157201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
   lip3: 'https://images.pexels.com/photos/27666913/pexels-photo-27666913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
@@ -30,9 +33,11 @@ const IMG = {
 }
 
 const HERO_CAROUSEL = [
-  { src: IMG.portrait1, label: 'Lash Results' },
+  { src: IMG.lash3, label: 'Lash Results' },
   { src: IMG.lip1, label: 'Lip Enhancement' },
+  { src: IMG.lash5, label: 'Brow Sculpt' },
   { src: IMG.skin1, label: 'Skin Renewal' },
+  { src: IMG.lash1, label: 'Hybrid Set' },
   { src: IMG.portrait2, label: 'Client Portrait' },
   { src: IMG.salon1, label: 'Academy Training' }
 ]
@@ -799,8 +804,8 @@ function Testimonials() {
 /* Academy */
 function Academy() {
   const cards = [
-    { title: 'Foundation Lash', desc: '4-day intensive in classic lash artistry with one-to-one mentorship.', img: IMG.lash1 },
-    { title: 'Advanced Volume', desc: 'Master Russian volume techniques, mapping & retention science.', img: IMG.lash2 },
+    { title: 'Foundation Lash', desc: '4-day intensive in classic lash artistry with one-to-one mentorship.', img: IMG.lash3 },
+    { title: 'Advanced Volume', desc: 'Master Russian volume techniques, mapping & retention science.', img: IMG.lash4 },
     { title: 'Aesthetic Masterclass', desc: 'Lip enhancement, anatomy and advanced injection techniques.', img: IMG.lip1 }
   ]
   return (
@@ -852,14 +857,14 @@ function Academy() {
 /* Instagram grid */
 function InstagramFeed() {
   const grid = [
-    { src: IMG.portrait1, span: 'col-span-2 row-span-2' },
-    { src: IMG.lash1, span: '' },
+    { src: IMG.lash1, span: 'col-span-2 row-span-2' },
+    { src: IMG.lash3, span: '' },
     { src: IMG.lip2, span: '' },
     { src: IMG.skin1, span: 'col-span-2' },
     { src: IMG.salon1, span: 'row-span-2' },
-    { src: IMG.lash2, span: '' },
+    { src: IMG.lash4, span: '' },
     { src: IMG.lip1, span: '' },
-    { src: IMG.portrait3, span: 'col-span-2' }
+    { src: IMG.lash5, span: 'col-span-2' }
   ]
   return (
     <section className="py-28 md:py-36 bg-[#F8F5F2]">

@@ -28,24 +28,19 @@ const IMG = {
   lip4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/9uze0f1n_IMG_4565.jpg',
   lip5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/p5zjagy2_IMG_4567.jpg',
   salon1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG',
-  salon2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG',
-  skin1: 'https://images.unsplash.com/photo-1699206791200-414d95e68450?q=85&w=1200&auto=format',
-  skin2: 'https://images.pexels.com/photos/15327092/pexels-photo-15327092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
+  salon2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/fxcgf4eh_8ea4a023-3443-41d6-8b02-99dad5db53b8.JPG',
   brow1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/7zca60sz_IMG_7340.jpg',
   brow2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/n6e51kj5_IMG_7342.jpg',
   brow3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/4u2zm95m_IMG_7339.jpg',
   brow4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/oz4l8hu1_IMG_7343.jpg',
-  brow5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/aihyjdjt_IMG_7341.jpg',
-  portrait1: 'https://images.unsplash.com/photo-1584464441663-3d23cb39b041?q=85&w=1400&auto=format',
-  portrait2: 'https://images.unsplash.com/photo-1646601940597-b73ffee83d6d?q=85&w=1400&auto=format',
-  portrait3: 'https://images.pexels.com/photos/17274037/pexels-photo-17274037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1200'
+  brow5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/aihyjdjt_IMG_7341.jpg'
 }
 
 const HERO_CAROUSEL = [
   { src: IMG.lash3, label: 'Lash Results' },
   { src: IMG.lip1, label: 'Lip Enhancement' },
   { src: IMG.brow1, label: 'Brow Sculpt' },
-  { src: IMG.skin1, label: 'Skin Renewal' },
+  { src: IMG.brow1, label: 'Skin Renewal' },
   { src: IMG.lash1, label: 'Hybrid Set' },
   { src: IMG.brow3, label: 'Brow Lamination' },
   { src: IMG.salon1, label: 'Academy Training' }
@@ -54,7 +49,7 @@ const HERO_CAROUSEL = [
 const FLOAT_CARDS = [
   { src: IMG.lash1, label: 'Lash Extensions', cls: 'top-[4%] left-[2%] w-[28%] aspect-[3/4]', speed: 0.4, dx: 1, dy: -1, rot: -4, delay: 0.2 },
   { src: IMG.lip3, label: 'Lip Enhancements', cls: 'top-[58%] left-[6%] w-[24%] aspect-[3/4]', speed: 0.7, dx: -1, dy: 1, rot: 5, delay: 0.4 },
-  { src: IMG.skin2, label: 'Skin Treatments', cls: 'top-[6%] right-[3%] w-[26%] aspect-[3/4]', speed: 0.5, dx: -1, dy: -1, rot: 6, delay: 0.6 },
+  { src: IMG.lip4, label: 'Skin Treatments', cls: 'top-[6%] right-[3%] w-[26%] aspect-[3/4]', speed: 0.5, dx: -1, dy: -1, rot: 6, delay: 0.6 },
   { src: IMG.lash2, label: 'Brow Treatments', cls: 'top-[62%] right-[8%] w-[22%] aspect-[3/4]', speed: 0.6, dx: 1, dy: 1, rot: -5, delay: 0.8 },
   { src: IMG.salon1, label: 'Salon Interior', cls: 'bottom-[2%] left-[40%] w-[20%] aspect-square', speed: 0.3, dx: 0, dy: 1, rot: 2, delay: 1.0 }
 ]
@@ -63,23 +58,23 @@ const TREATMENTS = [
   { title: 'Lash Extensions', desc: 'Hand-mapped, weightless lashes designed to your eye shape.', img: IMG.lash1, n: '01' },
   { title: 'Lash Lift', desc: 'A natural elevation. Soft curl, defined finish, lasting weeks.', img: IMG.lash2, n: '02' },
   { title: 'Brows', desc: 'Sculpted, defined and tailored to your bone structure.', img: IMG.brow3, n: '03' },
-  { title: 'Skin Treatments', desc: 'Advanced rituals for clarity, hydration and radiance.', img: IMG.skin1, n: '04' },
+  { title: 'Skin Treatments', desc: 'Advanced rituals for clarity, hydration and radiance.', img: IMG.brow1, n: '04' },
   { title: 'Aesthetics', desc: 'Precision lip enhancements and refined facial aesthetics.', img: IMG.lip5, n: '05' },
   { title: 'Academy', desc: 'Train with elite mentors. Industry-leading certification.', img: IMG.salon2, n: '06' }
 ]
 
 const RESULTS = [
   { before: IMG.lip2, after: IMG.lip1, name: 'Russian Lip', cat: 'Lips' },
-  { before: IMG.portrait3, after: IMG.lash1, name: 'Volume Set', cat: 'Lashes' },
-  { before: IMG.skin2, after: IMG.skin1, name: 'Skin Renewal', cat: 'Skin' },
+  { before: IMG.brow4, after: IMG.lash1, name: 'Volume Set', cat: 'Lashes' },
+  { before: IMG.lip4, after: IMG.brow1, name: 'Skin Renewal', cat: 'Skin' },
   { before: IMG.brow4, after: IMG.brow5, name: 'Brow Lamination', cat: 'Brows' }
 ]
 
 const TESTIMONIALS = [
-  { name: 'Isla M.', treatment: 'Russian Lip', img: IMG.portrait1, quote: 'Honestly the most beautiful, considered experience. K&Co treat every detail like art — I left feeling like the best version of myself.' },
-  { name: 'Chloe R.', treatment: 'Volume Lashes', img: IMG.portrait2, quote: 'A complete sensory ritual. The space, the music, the precision. I will never go anywhere else.' },
-  { name: 'Sienna T.', treatment: 'Brow Sculpt', img: IMG.portrait3, quote: 'Editorial perfection. They listened, refined and elevated everything about my brows.' },
-  { name: 'Amelia W.', treatment: 'Skin Ritual', img: IMG.skin1, quote: 'My skin has never looked like this. Genuinely glowing. The technique is next-level.' },
+  { name: 'Isla M.', treatment: 'Russian Lip', img: IMG.brow5, quote: 'Honestly the most beautiful, considered experience. K&Co treat every detail like art — I left feeling like the best version of myself.' },
+  { name: 'Chloe R.', treatment: 'Volume Lashes', img: IMG.lash3, quote: 'A complete sensory ritual. The space, the music, the precision. I will never go anywhere else.' },
+  { name: 'Sienna T.', treatment: 'Brow Sculpt', img: IMG.brow4, quote: 'Editorial perfection. They listened, refined and elevated everything about my brows.' },
+  { name: 'Amelia W.', treatment: 'Skin Ritual', img: IMG.brow1, quote: 'My skin has never looked like this. Genuinely glowing. The technique is next-level.' },
   { name: 'Freya L.', treatment: 'Academy Student', img: IMG.lip3, quote: 'I trained with K&Co and it transformed my career. The standards are exceptional.' }
 ]
 
@@ -612,7 +607,7 @@ function Founder() {
         <div className="lg:col-span-7 lg:order-2 order-1 relative">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px]">
             <motion.div style={{ scale, y }} className="absolute inset-0">
-              <img src={IMG.portrait1} alt="Founder" className="w-full h-full object-cover" />
+              <img src={IMG.brow5} alt="Founder" className="w-full h-full object-cover" />
             </motion.div>
             <div className="absolute top-6 left-6 right-6 flex items-center justify-between text-[10px] tracking-[0.3em] uppercase text-white/90">
               <span>Est. 2018</span>
@@ -745,7 +740,7 @@ function VideoSection() {
   return (
     <section ref={ref} className="relative h-[90vh] overflow-hidden bg-[#161616]">
       <motion.div style={{ scale }} className="absolute inset-0">
-        <img src={IMG.portrait2} alt="Cinematic" className="w-full h-full object-cover" />
+        <img src={IMG.lash3} alt="Cinematic" className="w-full h-full object-cover" />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
@@ -877,7 +872,7 @@ function InstagramFeed() {
     { src: IMG.lash1, span: 'col-span-2 row-span-2' },
     { src: IMG.lash3, span: '' },
     { src: IMG.lip2, span: '' },
-    { src: IMG.skin1, span: 'col-span-2' },
+    { src: IMG.brow1, span: 'col-span-2' },
     { src: IMG.salon1, span: 'row-span-2' },
     { src: IMG.lash4, span: '' },
     { src: IMG.lip5, span: '' },
@@ -969,7 +964,7 @@ function FAQ() {
 function FinalCTA() {
   return (
     <section id="book" className="relative h-screen min-h-[700px] overflow-hidden">
-      <img src={IMG.portrait3} alt="CTA" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={IMG.brow4} alt="CTA" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#161616]/30 via-[#161616]/45 to-[#161616]/80" />
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6 text-[#F8F5F2]">
         <motion.div

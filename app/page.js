@@ -248,9 +248,9 @@ function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         <img src={HERO_BG_URL} alt="" className="w-full h-full object-cover" />
         {/* Layered overlays to ensure readability while preserving luxury feel */}
-        <div className="absolute inset-0 bg-[#F8F5F2]/55 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F2]/85 via-[#F8F5F2]/40 to-[#F8F5F2]/15" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5F2]/25 via-transparent to-[#F8F5F2]/35" />
+        <div className="absolute inset-0 bg-[#F8F5F2]/35 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F2]/70 via-[#F8F5F2]/25 to-[#F8F5F2]/5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5F2]/15 via-transparent to-[#F8F5F2]/25" />
       </div>
       {/* Background blobs */}
       <motion.div style={{ y: yShift }} className="absolute inset-0 pointer-events-none">
@@ -272,7 +272,7 @@ function Hero() {
             <span className="text-[10px] tracking-[0.32em] uppercase text-[#8A8A8A]">Edinburgh Beauty • Aesthetics • Academy</span>
           </motion.div>
 
-          <h1 className="font-canela text-[44px] sm:text-[58px] md:text-[72px] leading-[0.98] tracking-[-0.01em] text-[#161616]">
+          <h1 className="font-canela text-[44px] sm:text-[58px] md:text-[72px] leading-[1.08] tracking-[0.005em] text-[#161616]">
             <span className="reveal-line"><SplitReveal delay={0.4}>Elevating</SplitReveal></span>{' '}
             <span className="reveal-line"><SplitReveal delay={0.5} className="italic text-[#B08968]">Natural Beauty</SplitReveal></span>{' '}
             <span className="reveal-line"><SplitReveal delay={0.6}>Through Luxury</SplitReveal></span>{' '}

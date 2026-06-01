@@ -16,11 +16,11 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'LashMeK&Co — Edinburgh Beauty, Aesthetics & Academy',
+  title: 'LASHMEK&CO. — Edinburgh Beauty Clinic, Aesthetics & Academy',
   description: 'Advanced aesthetics, premium lashes, brows, skin treatments and beauty education delivered with precision, expertise and care.',
-  keywords: 'Edinburgh beauty, lash extensions, aesthetics clinic, brow treatments, lip enhancements, skin treatments, beauty academy, luxury salon',
+  keywords: 'Edinburgh beauty clinic, lash extensions, aesthetics clinic, brow treatments, lip enhancements, skin treatments, beauty academy, luxury salon',
   openGraph: {
-    title: 'LashMeK&Co — Edinburgh Luxury Beauty',
+    title: 'LASHMEK&CO. — Edinburgh Luxury Beauty Clinic',
     description: 'Elevating Natural Beauty Through Luxury Treatments',
     type: 'website'
   }

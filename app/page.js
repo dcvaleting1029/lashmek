@@ -11,6 +11,8 @@ import 'swiper/css/pagination'
 import 'swiper/css/free-mode'
 
 /* ============ ASSETS ============ */
+const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
+
 const IMG = {
   lash1: 'https://images.pexels.com/photos/35013077/pexels-photo-35013077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
   lash2: 'https://images.pexels.com/photos/36930354/pexels-photo-36930354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900',
@@ -94,12 +96,15 @@ function Loader({ done }) {
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1.04 }}
               transition={{ duration: 1.8, ease: 'easeOut' }}
-              className="text-center"
+              className="text-center flex flex-col items-center"
             >
-              <div className="font-canela text-[#F8F5F2] text-5xl md:text-6xl tracking-wide">
-                LashMe<span className="italic text-[#C9A88D]">K</span>&Co
-              </div>
-              <div className="mt-3 text-[10px] tracking-[0.4em] text-[#C9A88D] uppercase">Edinburgh — Est. 2018</div>
+              <img
+                src={LOGO_URL}
+                alt="LashMeK&Co. Beauty Clinic"
+                className="w-[280px] md:w-[360px] h-auto"
+                style={{ filter: 'invert(1) brightness(1.1) contrast(1)' }}
+              />
+              <div className="mt-4 text-[10px] tracking-[0.4em] text-[#C9A88D] uppercase">Edinburgh — Est. 2018</div>
             </motion.div>
             <motion.div
               initial={{ width: 0 }}
@@ -175,8 +180,8 @@ function Nav() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${scrolled ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
-        <a href="#" data-cursor="Home" className="font-canela text-2xl md:text-[26px] tracking-wide text-[#161616]">
-          LashMe<span className="italic text-[#C9A88D]">K</span>&Co
+        <a href="#" data-cursor="Home" className="flex items-center gap-3 group">
+          <img src={LOGO_URL} alt="LashMeK&Co. Beauty Clinic" className="h-10 md:h-12 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-10">
           {NAV.map((n) => (
@@ -988,8 +993,8 @@ function Footer() {
       <div className="max-w-[1500px] mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10 pb-16 border-b border-[#C9A88D]/20">
           <div className="md:col-span-5">
-            <div className="font-canela text-4xl md:text-5xl">LashMe<span className="italic text-[#C9A88D]">K</span>&Co</div>
-            <p className="mt-6 text-[15px] text-[#F8F5F2]/65 max-w-sm">A luxury beauty house in the heart of Edinburgh — treatments, aesthetics and academy.</p>
+            <img src={LOGO_URL} alt="LashMeK&Co. Beauty Clinic" className="h-14 md:h-16 w-auto" style={{ filter: 'invert(1)' }} />
+            <p className="mt-6 text-[15px] text-[#F8F5F2]/65 max-w-sm">A luxury beauty clinic in the heart of Edinburgh — treatments, aesthetics and academy.</p>
           </div>
           <div className="md:col-span-3">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Studio</div>

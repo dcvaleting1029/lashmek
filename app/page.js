@@ -248,9 +248,9 @@ function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         <img src={HERO_BG_URL} alt="" className="w-full h-full object-cover" />
         {/* Layered overlays to ensure readability while preserving luxury feel */}
-        <div className="absolute inset-0 bg-[#F8F5F2]/82 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F2] via-[#F8F5F2]/70 to-[#F8F5F2]/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5F2]/40 via-transparent to-[#F8F5F2]/60" />
+        <div className="absolute inset-0 bg-[#F8F5F2]/55 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F5F2]/85 via-[#F8F5F2]/40 to-[#F8F5F2]/15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F5F2]/25 via-transparent to-[#F8F5F2]/35" />
       </div>
       {/* Background blobs */}
       <motion.div style={{ y: yShift }} className="absolute inset-0 pointer-events-none">
@@ -319,8 +319,8 @@ function Hero() {
           </motion.div>
         </div>
 
-        {/* RIGHT — FLOATING IMAGE STAGE */}
-        <div ref={stageRef} className="hero-stage relative h-[80vh] lg:h-[88vh] w-full">
+        {/* RIGHT — FLOATING IMAGE STAGE (desktop only) */}
+        <div ref={stageRef} className="hero-stage relative h-[80vh] lg:h-[88vh] w-full hidden lg:block">
           {/* Center auto-carousel card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.82 }}

@@ -16,6 +16,7 @@ const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refin
 const HERO_BG_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/fxcgf4eh_8ea4a023-3443-41d6-8b02-99dad5db53b8.JPG'
 const SALON_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/lt1veqcv_cfbf72f8-4445-4d02-b6c1-647baf8788b2.JPG'
 const FOUNDER_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/3l05f8sl_18ed7d92-cadf-4f50-9e4a-b11031cf0694.JPG'
+const BOOKING_URL = 'https://www.fresha.com/en-GB/a/lashmek-edinburgh-uk-143-gilmore-place-acckxp8b/booking?menu=true&cartId=dffffc3a-8f9b-423d-91e7-dc9339ee7b8c'
 
 const IMG = {
   lash1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
@@ -204,7 +205,7 @@ function Nav() {
             <a key={n.label} href={n.href} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n.label}</a>
           ))}
         </nav>
-        <a href="#book" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">
           <span className="btn-fill" />
           <span>Book</span>
           <ArrowUpRight size={14} />
@@ -300,7 +301,7 @@ function Hero() {
             transition={{ duration: 0.9, delay: 1.2 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <a href="#book" data-cursor="Book" className="btn-lux btn-primary">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="btn-lux btn-primary">
               <span className="btn-fill" />
               <span>Book Appointment</span>
               <ArrowUpRight size={16} />
@@ -923,7 +924,7 @@ function FinalCTA() {
         </motion.h2>
         <p className="mt-8 text-[14px] md:text-[15px] text-[#F8F5F2]/70 max-w-lg">Reserve your place. Spaces are limited and curated for an intimate experience.</p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="#" data-cursor="Book" className="btn-lux btn-light">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="btn-lux btn-light">
             <span className="btn-fill" />
             <span>Book Appointment</span>
             <ArrowUpRight size={16} />

@@ -8,6 +8,8 @@ import { ArrowUpRight } from 'lucide-react'
 export const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
 export const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/klsqu6ix_LASHMEK%26CO.%20-%20Logo%20%28Transparent%29.png'
 
+export const BOOKING_URL = 'https://www.fresha.com/en-GB/a/lashmek-edinburgh-uk-143-gilmore-place-acckxp8b/booking?menu=true&cartId=dffffc3a-8f9b-423d-91e7-dc9339ee7b8c'
+
 export const NAV_LINKS = [
   { label: 'Treatments', href: '/#treatments' },
   { label: 'Academy', href: '/courses' },
@@ -131,11 +133,11 @@ export function Nav({ variant = 'auto' }) {
             <Link key={n.label} href={n.href} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n.label}</Link>
           ))}
         </nav>
-        <Link href="/#book" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">
           <span className="btn-fill" />
           <span>Book</span>
           <ArrowUpRight size={14} />
-        </Link>
+        </a>
       </div>
     </header>
   )

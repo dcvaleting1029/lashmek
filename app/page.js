@@ -86,7 +86,13 @@ const FAQS = [
   { q: 'Do you offer gift cards?', a: 'Yes — beautifully presented physical and digital gift cards are available across all services and academy courses.' }
 ]
 
-const NAV = ['Treatments', 'Academy', 'Results', 'About', 'Contact']
+const NAV = [
+  { label: 'Treatments', href: '#treatments' },
+  { label: 'Academy', href: '/courses' },
+  { label: 'Results', href: '#results' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#contact' }
+]
 
 /* ============ COMPONENTS ============ */
 
@@ -195,7 +201,7 @@ function Nav() {
         </a>
         <nav className="hidden md:flex items-center gap-10">
           {NAV.map((n) => (
-            <a key={n} href={`#${n.toLowerCase()}`} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n}</a>
+            <a key={n.label} href={n.href} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n.label}</a>
           ))}
         </nav>
         <a href="#book" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">

@@ -826,7 +826,7 @@ function InstagramFeed() {
               Follow our <span className="italic text-[#B08968]">studio</span>.
             </h2>
           </div>
-          <a href="#" data-cursor="Follow" className="inline-flex items-center gap-3 text-[11px] tracking-[0.25em] uppercase border-b border-[#161616] pb-2">
+          <a href="https://www.instagram.com/lashmekco_academy/" target="_blank" rel="noopener noreferrer" data-cursor="Follow" className="inline-flex items-center gap-3 text-[11px] tracking-[0.25em] uppercase border-b border-[#161616] pb-2">
             <Instagram size={14} /> Follow on Instagram
           </a>
         </div>

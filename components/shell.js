@@ -163,7 +163,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Follow</div>
             <div className="flex flex-col gap-2 text-sm text-[#F8F5F2]/70">
-              <a href="#" data-cursor="Follow" className="lux-underline">Instagram</a>
+              <a href="https://www.instagram.com/lashmekco_academy/" target="_blank" rel="noopener noreferrer" data-cursor="Follow" className="lux-underline">Instagram</a>
               <a href="#" data-cursor="Follow" className="lux-underline">TikTok</a>
               <a href="#" data-cursor="Follow" className="lux-underline">Pinterest</a>
             </div>

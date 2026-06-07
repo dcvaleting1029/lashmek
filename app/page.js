@@ -42,7 +42,6 @@ const HERO_CAROUSEL = [
   { src: IMG.lash3, label: 'Lash Results' },
   { src: IMG.lip1, label: 'Lip Enhancement' },
   { src: IMG.brow1, label: 'Brow Sculpt' },
-  { src: IMG.brow1, label: 'Skin Renewal' },
   { src: IMG.lash1, label: 'Hybrid Set' },
   { src: IMG.brow3, label: 'Brow Lamination' },
   { src: IMG.salon1, label: 'Academy Training' }
@@ -66,7 +65,6 @@ const TREATMENTS = [
 const RESULTS = [
   { before: IMG.lip2, after: IMG.lip1, name: 'Russian Lip', cat: 'Lips' },
   { before: IMG.brow4, after: IMG.lash1, name: 'Volume Set', cat: 'Lashes' },
-  { before: IMG.lip4, after: IMG.brow1, name: 'Skin Renewal', cat: 'Skin' },
   { before: IMG.brow4, after: IMG.brow5, name: 'Brow Lamination', cat: 'Brows' }
 ]
 
@@ -74,7 +72,7 @@ const TESTIMONIALS = [
   { name: 'Isla M.', treatment: 'Russian Lip', img: IMG.brow5, quote: 'Honestly the most beautiful, considered experience. K&Co treat every detail like art — I left feeling like the best version of myself.' },
   { name: 'Chloe R.', treatment: 'Volume Lashes', img: IMG.lash3, quote: 'A complete sensory ritual. The space, the music, the precision. I will never go anywhere else.' },
   { name: 'Sienna T.', treatment: 'Brow Sculpt', img: IMG.brow4, quote: 'Editorial perfection. They listened, refined and elevated everything about my brows.' },
-  { name: 'Amelia W.', treatment: 'Skin Ritual', img: IMG.brow1, quote: 'My skin has never looked like this. Genuinely glowing. The technique is next-level.' },
+  { name: 'Amelia W.', treatment: 'Lip Aesthetics', img: IMG.lip5, quote: 'My results have never looked like this. Genuinely glowing. The technique is next-level.' },
   { name: 'Freya L.', treatment: 'Academy Student', img: IMG.lip3, quote: 'I trained with K&Co and it transformed my career. The standards are exceptional.' }
 ]
 
@@ -291,7 +289,7 @@ function Hero() {
             transition={{ duration: 0.9, delay: 1.0 }}
             className="mt-8 text-[15px] md:text-[16px] leading-relaxed text-[#161616]/70 max-w-md"
           >
-            Advanced aesthetics, premium lashes, brows, skin treatments and beauty education — delivered with precision, expertise and care.
+            Advanced aesthetics, premium lashes, brows and beauty education — delivered with precision, expertise and care.
           </motion.p>
 
           <motion.div
@@ -410,7 +408,7 @@ function TrustBar() {
 
 /* Marquee */
 function Marquee() {
-  const items = ['Edinburgh', '✦', 'Lashes', '✦', 'Brows', '✦', 'Lips', '✦', 'Skin', '✦', 'Aesthetics', '✦', 'Academy', '✦']
+  const items = ['Edinburgh', '✦', 'Lashes', '✦', 'Brows', '✦', 'Lips', '✦', 'Aesthetics', '✦', 'Academy', '✦']
   const loop = [...items, ...items]
   return (
     <div className="py-10 border-y border-[#C9A88D]/30 overflow-hidden bg-[#F8F5F2]">
@@ -653,7 +651,7 @@ function Results() {
             <span className="px-3 py-1.5 border border-[#161616]/30 rounded-full">Lips</span>
             <span className="px-3 py-1.5 border border-[#161616]/30 rounded-full">Brows</span>
             <span className="px-3 py-1.5 border border-[#161616]/30 rounded-full">Lashes</span>
-            <span className="px-3 py-1.5 border border-[#161616]/30 rounded-full">Skin</span>
+            <span className="px-3 py-1.5 border border-[#161616]/30 rounded-full">Aesthetics</span>
           </div>
         </div>
       </div>

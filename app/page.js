@@ -56,12 +56,11 @@ const FLOAT_CARDS = [
 ]
 
 const TREATMENTS = [
-  { title: 'Lash Extensions', desc: 'Hand-mapped, weightless lashes designed to your eye shape.', img: IMG.lash1, n: '01' },
-  { title: 'Lash Lift', desc: 'A natural elevation. Soft curl, defined finish, lasting weeks.', img: IMG.lash2, n: '02' },
-  { title: 'Brows', desc: 'Sculpted, defined and tailored to your bone structure.', img: IMG.brow3, n: '03' },
-  { title: 'Skin Treatments', desc: 'Advanced rituals for clarity, hydration and radiance.', img: IMG.brow1, n: '04' },
-  { title: 'Aesthetics', desc: 'Precision lip enhancements and refined facial aesthetics.', img: IMG.lip5, n: '05' },
-  { title: 'Academy', desc: 'Train with elite mentors. Industry-leading certification.', img: IMG.salon2, n: '06' }
+  { slug: 'lash-extensions', title: 'Lash Extensions', desc: 'Hand-mapped, weightless lashes designed to your eye shape.', img: IMG.lash1, n: '01' },
+  { slug: 'lash-lift', title: 'Lash Lift', desc: 'A natural elevation. Soft curl, defined finish, lasting weeks.', img: IMG.lash2, n: '02' },
+  { slug: 'brows', title: 'Brows', desc: 'Sculpted, defined and tailored to your bone structure.', img: IMG.brow3, n: '03' },
+  { slug: 'aesthetics', title: 'Aesthetics', desc: 'Precision lip enhancements and refined facial aesthetics.', img: IMG.lip5, n: '04' },
+  { slug: 'courses', external: true, title: 'Academy', desc: 'Train with elite mentors. Industry-leading certification.', img: IMG.salon2, n: '05' }
 ]
 
 const RESULTS = [
@@ -471,15 +470,18 @@ function Treatments() {
         style={{ WebkitOverflowScrolling: 'touch' }}
       >
         <div className="flex gap-6 w-max">
-          {TREATMENTS.map((t, i) => (
-            <motion.div
+          {TREATMENTS.map((t, i) => {
+            const href = t.external ? `/${t.slug}` : `/treatments/${t.slug}`
+            return (
+            <motion.a
               key={i}
+              href={href}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.9, delay: (i % 3) * 0.1, ease: [0.2, 0.7, 0.2, 1] }}
               data-cursor="View Treatment"
-              className="shrink-0 w-[78vw] sm:w-[55vw] md:w-[40vw] lg:w-[30vw] aspect-[3/4] relative rounded-[18px] overflow-hidden group snap-start"
+              className="shrink-0 w-[78vw] sm:w-[55vw] md:w-[40vw] lg:w-[30vw] aspect-[3/4] relative rounded-[18px] overflow-hidden group snap-start block"
             >
               <img src={t.img} alt={t.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
@@ -495,8 +497,8 @@ function Treatments() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.a>
+          )})}
         </div>
       </div>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 pb-20 text-[10px] tracking-[0.3em] uppercase text-[#161616]/50">← Drag or scroll to explore →</div>

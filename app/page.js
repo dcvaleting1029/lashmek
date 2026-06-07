@@ -727,10 +727,10 @@ function Testimonials() {
         >
           {TESTIMONIALS.map((t, i) => (
             <SwiperSlide key={i}>
-              <div data-cursor="Drag" className="glass rounded-[18px] p-7 h-[400px] flex flex-col justify-between">
+              <div data-cursor="Drag" className="glass rounded-[18px] p-7 min-h-[420px] h-full flex flex-col justify-between">
                 <div>
                   <div className="flex gap-1 mb-5">{[...Array(5)].map((_, j) => <Star key={j} size={13} fill="#C9A88D" stroke="#C9A88D" />)}</div>
-                  <p className="font-canela text-xl md:text-2xl leading-[1.35] text-[#F8F5F2]">&ldquo;{t.quote}&rdquo;</p>
+                  <p className="font-canela text-base md:text-lg leading-[1.55] text-[#F8F5F2]">&ldquo;{t.quote}&rdquo;</p>
                 </div>
                 <div className="flex items-center gap-4 mt-6 pt-6 border-t border-[#C9A88D]/20">
                   <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" />
@@ -958,6 +958,79 @@ function Footer() {
             <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">hello@lashmek.co<br />+44 131 000 0000</p>
           </div>
           <div className="md:col-span-2">
+            <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Follow</div>
+            <div className="flex flex-col gap-2 text-sm text-[#F8F5F2]/70">
+              <a href="#" data-cursor="Follow" className="lux-underline">Instagram</a>
+              <a href="#" data-cursor="Follow" className="lux-underline">TikTok</a>
+              <a href="#" data-cursor="Follow" className="lux-underline">Pinterest</a>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-8 text-[11px] tracking-[0.2em] uppercase text-[#F8F5F2]/40">
+          <span>© 2025 LashMeK&Co — All rights reserved</span>
+          <span>Crafted in Edinburgh</span>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+/* Lenis smooth scroll */
+function useLenis() {
+  useEffect(() => {
+    let lenis
+    let raf
+    ;(async () => {
+      const Lenis = (await import('lenis')).default
+      lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) })
+      const loop = (time) => { lenis.raf(time); raf = requestAnimationFrame(loop) }
+      raf = requestAnimationFrame(loop)
+    })()
+    return () => {
+      cancelAnimationFrame(raf)
+      if (lenis) lenis.destroy()
+    }
+  }, [])
+}
+
+/* ============ MAIN ============ */
+function App() {
+  const [loaded, setLoaded] = useState(false)
+  useLenis()
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoaded(true), 2000)
+    return () => clearTimeout(t)
+  }, [])
+
+  return (
+    <>
+      <Loader done={loaded} />
+      <Cursor />
+      <div className="grain-overlay" />
+      <Nav />
+      <main>
+        <Hero />
+        <TrustBar />
+        <Marquee />
+        <Treatments />
+        <Founder />
+        <Results />
+        <VideoSection />
+        <Testimonials />
+        <Academy />
+        <InstagramFeed />
+        <FAQ />
+        <FinalCTA />
+        <Footer />
+      </main>
+    </>
+  )
+}
+
+export default App
+App
+  <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Follow</div>
             <div className="flex flex-col gap-2 text-sm text-[#F8F5F2]/70">
               <a href="#" data-cursor="Follow" className="lux-underline">Instagram</a>

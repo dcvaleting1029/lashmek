@@ -958,11 +958,11 @@ function Footer() {
           </div>
           <div className="md:col-span-3">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Studio</div>
-            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">Private Suite<br />Edinburgh, Scotland<br />By Appointment Only</p>
+            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">143 Gilmore Pl<br />Edinburgh EH3 9PW<br />United Kingdom<br />By Appointment Only</p>
           </div>
           <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Contact</div>
-            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">hello@lashmek.co<br />+44 131 000 0000</p>
+            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">kirimaa@icloud.com<br />+44 7494 075119</p>
           </div>
           <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Follow</div>
@@ -975,7 +975,7 @@ function Footer() {
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 pt-8 text-[11px] tracking-[0.2em] uppercase text-[#F8F5F2]/40">
           <span>© 2025 LashMeK&Co — All rights reserved</span>
-          <span>Crafted in Edinburgh</span>
+          <span>Designed By <a href="https://jayalminshawi.com/" target="_blank" rel="noopener noreferrer" className="lux-underline text-[#C9A88D] hover:text-[#F8F5F2] transition-colors">Jay Alminshawi</a></span>
         </div>
       </div>
     </footer>

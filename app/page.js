@@ -738,7 +738,9 @@ function Testimonials() {
                   <p className="font-canela text-base md:text-lg leading-[1.55] text-[#F8F5F2]">&ldquo;{t.quote}&rdquo;</p>
                 </div>
                 <div className="flex items-center gap-4 mt-6 pt-6 border-t border-[#C9A88D]/20">
-                  <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover" />
+                  <div className="w-14 h-14 rounded-full overflow-hidden bg-[#F8F5F2] flex items-center justify-center shrink-0 ring-1 ring-[#C9A88D]/30">
+                    <img src={LOGO_URL} alt="LashMeK&Co. Beauty Clinic" className="w-full h-full object-contain p-1.5" />
+                  </div>
                   <div>
                     <div className="text-sm text-[#F8F5F2]">{t.name}</div>
                     <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mt-1">{t.treatment}</div>

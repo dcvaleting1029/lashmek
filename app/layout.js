@@ -16,12 +16,12 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'LASHMEK&CO. — Edinburgh Beauty Clinic, Aesthetics & Academy',
-  description: 'Advanced aesthetics, premium lashes, brows, skin treatments and beauty education delivered with precision, expertise and care.',
-  keywords: 'Edinburgh beauty clinic, lash extensions, aesthetics clinic, brow treatments, lip enhancements, skin treatments, beauty academy, luxury salon',
+  title: 'Lash Extensions Edinburgh | Brows, Aesthetics & SPMU | LashMeK & Co',
+  description: 'Professional lash extensions, brow treatments, lash lifts, aesthetics and semi-permanent makeup in Edinburgh. Experienced beauty specialists helping you look and feel your best. Book online today.',
+  keywords: 'lash extensions Edinburgh, brows Edinburgh, aesthetics Edinburgh, SPMU, semi-permanent makeup, lash lift, lip filler Edinburgh, beauty clinic Edinburgh, LashMeK&Co',
   openGraph: {
-    title: 'LASHMEK&CO. — Edinburgh Luxury Beauty Clinic',
-    description: 'Elevating Natural Beauty Through Luxury Treatments',
+    title: 'Lash Extensions Edinburgh | Brows, Aesthetics & SPMU | LashMeK & Co',
+    description: 'Professional lash extensions, brow treatments, lash lifts, aesthetics and semi-permanent makeup in Edinburgh. Experienced beauty specialists helping you look and feel your best. Book online today.',
     type: 'website'
   }
 }

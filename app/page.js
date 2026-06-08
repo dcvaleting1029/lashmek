@@ -69,11 +69,16 @@ const RESULTS = [
 ]
 
 const TESTIMONIALS = [
-  { name: 'Isla M.', treatment: 'Russian Lip', img: IMG.brow5, quote: 'Honestly the most beautiful, considered experience. K&Co treat every detail like art — I left feeling like the best version of myself.' },
-  { name: 'Chloe R.', treatment: 'Volume Lashes', img: IMG.lash3, quote: 'A complete sensory ritual. The space, the music, the precision. I will never go anywhere else.' },
-  { name: 'Sienna T.', treatment: 'Brow Sculpt', img: IMG.brow4, quote: 'Editorial perfection. They listened, refined and elevated everything about my brows.' },
-  { name: 'Amelia W.', treatment: 'Lip Aesthetics', img: IMG.lip5, quote: 'My results have never looked like this. Genuinely glowing. The technique is next-level.' },
-  { name: 'Freya L.', treatment: 'Academy Student', img: IMG.lip3, quote: 'I trained with K&Co and it transformed my career. The standards are exceptional.' }
+  { name: 'Caitlin Ward', treatment: 'Botox, Lip Filler & Korean Lash Lift', img: IMG.lip5, quote: 'I love going to Kirima at LashMeKCo for all my aesthetic treatments! She\u2019s done my Botox, lip filler, and Korean lash lift, and every single time the results are flawless. She\u2019s so knowledgeable, and makes me feel so comfortable throughout the whole process. Couldn\u2019t recommend her more!' },
+  { name: 'Noor Sanhory', treatment: 'Lash Tech', img: IMG.lash3, quote: 'Always and forever will be my lash tech!! I leave there feeling so pretty and happy, Kirima is such a lovely person and her work is beautiful!' },
+  { name: 'Heather Mann', treatment: 'Injectables', img: IMG.lip3, quote: '10000/10 service from Lashmek with Kirima. I was really nervous about getting some little injectable tweaks for the first time but Kirima put me at ease, was so friendly and it didn\u2019t hurt at all. She\u2019s super experienced and I\u2019ll be back very soon. I\u2019d one hundred per cent trust Kirima if you\u2019re thinking of having some lil tweaks.' },
+  { name: 'Nicola Kelly', treatment: 'Various Treatments', img: IMG.brow1, quote: 'Amazing service \u2014 been going to Kirima for a few different treatments, always makes me feel comfortable & love the results after her work.' },
+  { name: 'Natasha Ishaq', treatment: 'Lashes & Brows', img: IMG.lash5, quote: 'Absolutely amazing! I had the best experience at Lashmek. The team was so professional and welcoming from the moment I walked in. My eyelash extensions are absolutely stunning \u2014 lightweight, natural-looking, and exactly what I wanted. And my semi-permanent eyebrows are perfection! The attention to detail and precision were incredible, and they\u2019ve given me the perfect shape. They took the time to listen to what I wanted, made sure I was comfortable throughout, and provided excellent aftercare advice. I\u2019ve had so many compliments already. If you\u2019re looking for top-quality beauty treatments in a relaxing environment, this is the place to go. I won\u2019t trust anyone else with my lashes and brows now. Highly recommend!' },
+  { name: 'Safiya Ishaq', treatment: 'Brow Tint & Shape', img: IMG.brow3, quote: 'Go here for my brows (tint and shape) and on my first appointment, Kirima made me feel welcome and relaxed and I love, love, love the end result. I trust her and would recommend anyone who is unsure about where to start to reach out to her \u2014 she is fab!' },
+  { name: 'Donna Ganson', treatment: 'Ombre Brows, Botox & Lip Filler', img: IMG.lip1, quote: 'Kirima is fantastic! I\u2019ve had my permanent ombre brows, botox and lip filler. Gives a great detailed consultation beforehand. Shows the products used and shows great care for her clients. I shared what I wanted to achieve and she captured it perfectly. I would never go anywhere else \u2014 best of the best!' },
+  { name: 'Donna Ganson', treatment: 'Long-time Client', img: IMG.brow5, quote: 'Great experience, so warm and welcoming. I\u2019ve been going to lashmek for 1\u20132 years now and couldn\u2019t be happier with the results after each time. 100% recommend.' },
+  { name: 'Niamh Fellenger', treatment: 'Long-time Client', img: IMG.lash1, quote: 'Always leave feeling great. Lovely, great humour & became friends \u2764 been going for years now x' },
+  { name: 'Jamila Ishaq', treatment: 'All Treatments', img: IMG.lip2, quote: 'I go here for all my treatments and it\u2019s always such a great service! 10/10 would recommend to everyone.' }
 ]
 
 const FAQS = [
@@ -727,7 +732,7 @@ function Testimonials() {
         >
           {TESTIMONIALS.map((t, i) => (
             <SwiperSlide key={i}>
-              <div data-cursor="Drag" className="glass rounded-[18px] p-7 min-h-[420px] h-full flex flex-col justify-between">
+              <div data-cursor="Drag" className="glass rounded-[18px] p-7 min-h-[460px] h-full flex flex-col justify-between">
                 <div>
                   <div className="flex gap-1 mb-5">{[...Array(5)].map((_, j) => <Star key={j} size={13} fill="#C9A88D" stroke="#C9A88D" />)}</div>
                   <p className="font-canela text-base md:text-lg leading-[1.55] text-[#F8F5F2]">&ldquo;{t.quote}&rdquo;</p>

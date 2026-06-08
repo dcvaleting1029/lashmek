@@ -56,7 +56,7 @@ function TreatmentPage() {
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#F8F5F2]/70">LashMeK&Co. Beauty Clinic</span>
             </div>
             <h1 className="font-canela font-bold uppercase text-[clamp(46px,11vw,180px)] leading-[0.92] tracking-[-0.03em] max-w-5xl">
-              <SplitReveal delay={0.3}>{treatment.title}</SplitReveal>
+              {treatment.title}
             </h1>
             <p className="mt-8 max-w-xl text-[15px] md:text-[18px] text-[#F8F5F2]/85 leading-[1.7]">{treatment.tagline}</p>
 

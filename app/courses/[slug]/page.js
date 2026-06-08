@@ -11,9 +11,7 @@ import { COURSES } from '@/lib/courses'
 function CourseDetailPage() {
   const params = useParams()
   const slug = params?.slug
-  const [loaded, setLoaded] = useState(false)
   useLenis()
-  useEffect(() => { const t = setTimeout(() => setLoaded(true), 1600); return () => clearTimeout(t) }, [])
 
   const course = COURSES.find(c => c.slug === slug)
   if (!course) {
@@ -38,7 +36,6 @@ function CourseDetailPage() {
 
   return (
     <>
-      <Loader done={loaded} />
       <Cursor />
       <div className="grain-overlay" />
       <Nav />

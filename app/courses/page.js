@@ -78,19 +78,13 @@ function CourseGroup({ heading, kicker, courses, image, reverse }) {
 }
 
 function CoursesPage() {
-  const [loaded, setLoaded] = useState(false)
   useLenis()
-  useEffect(() => {
-    const t = setTimeout(() => setLoaded(true), 1600)
-    return () => clearTimeout(t)
-  }, [])
 
   const lashCourses = COURSES.filter(c => c.category === 'lash')
   const browCourses = COURSES.filter(c => c.category === 'brow')
 
   return (
     <>
-      <Loader done={loaded} />
       <Cursor />
       <div className="grain-overlay" />
       <Nav />

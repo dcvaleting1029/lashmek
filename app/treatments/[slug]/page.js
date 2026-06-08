@@ -11,10 +11,8 @@ import { TREATMENTS_DATA, BOOKING_URL } from '@/lib/treatments'
 function TreatmentPage() {
   const params = useParams()
   const slug = params?.slug
-  const [loaded, setLoaded] = useState(false)
   const [lightbox, setLightbox] = useState(null)
   useLenis()
-  useEffect(() => { const t = setTimeout(() => setLoaded(true), 1600); return () => clearTimeout(t) }, [])
 
   const treatment = TREATMENTS_DATA.find(t => t.slug === slug)
   if (!treatment) {
@@ -39,7 +37,6 @@ function TreatmentPage() {
 
   return (
     <>
-      <Loader done={loaded} />
       <Cursor />
       <div className="grain-overlay" />
       <Nav />

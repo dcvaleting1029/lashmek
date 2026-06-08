@@ -969,7 +969,6 @@ function Footer() {
             <div className="flex flex-col gap-2 text-sm text-[#F8F5F2]/70">
               <a href="#" data-cursor="Follow" className="lux-underline">Instagram</a>
               <a href="https://www.tiktok.com/@kirimaa1" target="_blank" rel="noopener noreferrer" data-cursor="Follow" className="lux-underline">TikTok</a>
-              <a href="#" data-cursor="Follow" className="lux-underline">Pinterest</a>
             </div>
           </div>
         </div>

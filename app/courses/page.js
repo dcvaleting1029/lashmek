@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight, Check, ChevronDown } from 'lucide-react'
 import { Cursor, useLenis, Loader, Nav, Footer, SplitReveal } from '@/components/shell'
 import { COURSES, COURSE_BENEFITS, COURSE_HERO_IMG, LASH_GROUP_IMG, BROW_GROUP_IMG } from '@/lib/courses'
+import { STUDENT_REVIEWS } from '@/lib/academy-reviews'
+import { Quote, Star } from 'lucide-react'
 
 function CourseGroup({ heading, kicker, courses, image, reverse }) {
   return (
@@ -133,6 +135,56 @@ function CoursesPage() {
 
         <CourseGroup heading="Lash Training" kicker="Lash Training Courses" courses={lashCourses} image={LASH_GROUP_IMG} reverse={false} />
         <CourseGroup heading="Brow Training" kicker="Brow Training Courses" courses={browCourses} image={BROW_GROUP_IMG} reverse={true} />
+
+        {/* STUDENT REVIEWS */}
+        <section className="py-24 md:py-32 bg-[#161616] text-[#F8F5F2] relative overflow-hidden">
+          <div className="gold-blob absolute top-1/4 -left-20 w-[500px] h-[500px] opacity-30" />
+          <div className="gold-blob absolute bottom-0 right-0 w-[600px] h-[600px] opacity-20" />
+          <div className="relative max-w-[1300px] mx-auto px-6 md:px-10">
+            <div className="flex items-end justify-between gap-6 flex-wrap mb-14">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-10 h-px bg-[#C9A88D]" />
+                  <span className="text-[10px] tracking-[0.32em] uppercase text-[#C9A88D]">Student Voices • Google Reviews</span>
+                </div>
+                <h2 className="font-canela font-bold uppercase text-[36px] md:text-[60px] leading-[1.05] tracking-[-0.02em]">
+                  Loved by <span className="italic font-medium text-[#C9A88D]">our students</span>
+                </h2>
+              </div>
+              <Link href="/academy/reviews" data-cursor="Read" className="inline-flex items-center gap-3 text-[11px] tracking-[0.25em] uppercase border-b border-[#F8F5F2]/40 hover:border-[#C9A88D] hover:text-[#C9A88D] transition-colors pb-2">
+                Read all reviews <ArrowUpRight size={14} />
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+              {STUDENT_REVIEWS.map((r, i) => (
+                <motion.article
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.8, delay: (i % 2) * 0.1 }}
+                  className="relative glass rounded-[20px] p-8 md:p-10"
+                >
+                  <Quote className="absolute top-6 right-6 text-[#C9A88D]/30" size={40} />
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="w-14 h-14 rounded-full overflow-hidden bg-[#F8F5F2] flex items-center justify-center shrink-0 ring-1 ring-[#C9A88D]/30">
+                      <img src="https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg" alt="LashMeK&Co." className="w-full h-full object-contain p-1.5" />
+                    </div>
+                    <div>
+                      <div className="font-canela text-lg text-[#F8F5F2]">{r.name}</div>
+                      <div className="flex items-center gap-2 mt-1">
+                        <div className="flex gap-0.5">{[...Array(5)].map((_, j) => <Star key={j} size={11} fill="#C9A88D" stroke="#C9A88D" />)}</div>
+                        <span className="text-[10px] tracking-[0.2em] uppercase text-[#F8F5F2]/55">{r.when}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-4">{r.course}</div>
+                  <p className="font-canela text-[14px] md:text-[16px] leading-[1.75] text-[#F8F5F2]/85 line-clamp-6">&ldquo;{r.quote}&rdquo;</p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* WHY TRAIN */}
         <section className="bg-[#E9DED3] py-28 md:py-36">

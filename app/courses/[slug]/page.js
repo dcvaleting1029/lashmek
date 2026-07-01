@@ -83,7 +83,10 @@ function CourseDetailPage() {
               </div>
               <div className="flex items-center gap-3">
                 <div className="text-[10px] tracking-[0.3em] uppercase text-[#F8F5F2]/55">Investment</div>
-                <div className="font-canela text-3xl text-[#C9A88D]">£{course.price}{course.save && <span className="ml-3 text-xs align-middle tracking-[0.2em] uppercase text-[#F8F5F2]/60">Save £{course.save}</span>}</div>
+                <div>
+                  <div className="font-canela text-2xl md:text-3xl text-[#F8F5F2] leading-none">£{course.priceWithoutKit} <span className="text-xs align-middle tracking-[0.2em] uppercase text-[#F8F5F2]/60 ml-1">without kit</span></div>
+                  <div className="font-canela text-2xl md:text-3xl text-[#C9A88D] leading-none mt-1.5">£{course.priceWithKit} <span className="text-xs align-middle tracking-[0.2em] uppercase text-[#C9A88D]/80 ml-1">with starter kit</span></div>
+                </div>
               </div>
             </div>
 
@@ -146,13 +149,20 @@ function CourseDetailPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 pt-8 border-t border-[#C9A88D]/20 flex items-end justify-between">
+                <div className="mt-8 pt-8 border-t border-[#C9A88D]/20 flex flex-col gap-6">
                   <div>
                     <div className="text-[10px] tracking-[0.3em] uppercase text-[#F8F5F2]/55">Total Investment</div>
-                    <div className="font-canela text-4xl text-[#C9A88D] mt-1">£{course.price}</div>
-                    {course.save && <div className="text-[10px] tracking-[0.2em] uppercase text-[#C9A88D]/80 mt-1">Save £{course.save} — Bundle saving</div>}
+                    <div className="mt-2 flex items-baseline gap-3 flex-wrap">
+                      <div className="font-canela text-3xl text-[#F8F5F2]">£{course.priceWithoutKit}</div>
+                      <span className="text-[10px] tracking-[0.25em] uppercase text-[#F8F5F2]/60">Without kit</span>
+                    </div>
+                    <div className="mt-3 flex items-baseline gap-3 flex-wrap">
+                      <div className="font-canela text-3xl text-[#C9A88D]">£{course.priceWithKit}</div>
+                      <span className="text-[10px] tracking-[0.25em] uppercase text-[#C9A88D]/80">With starter kit</span>
+                    </div>
+                    {course.save && <div className="text-[10px] tracking-[0.25em] uppercase text-[#C9A88D] mt-3">Bundle saving — £{course.save}</div>}
                   </div>
-                  <a href="#book" data-cursor="Enrol" className="btn-lux btn-light !py-3 !px-5 !text-[10px] !border-[#C9A88D] !text-[#C9A88D]">
+                  <a href="#book" data-cursor="Enrol" className="btn-lux btn-light w-full justify-center !border-[#C9A88D] !text-[#C9A88D]">
                     <span className="btn-fill" />
                     <span>Enrol</span>
                     <ArrowUpRight size={14} />
@@ -218,7 +228,7 @@ function CourseDetailPage() {
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex items-end justify-between">
                       <div>
                         <h3 className="font-canela font-bold uppercase text-xl md:text-2xl leading-tight">{c.title}</h3>
-                        <div className="mt-1 font-canela text-lg text-[#C9A88D]">£{c.price}</div>
+                        <div className="mt-1 font-canela text-lg text-[#C9A88D]">From £{c.priceWithoutKit}</div>
                       </div>
                       <div className="w-11 h-11 rounded-full border border-white/60 flex items-center justify-center group-hover:bg-[#C9A88D] group-hover:border-[#C9A88D] transition-all duration-500">
                         <ArrowUpRight size={16} />

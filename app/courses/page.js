@@ -58,8 +58,10 @@ function CourseGroup({ heading, kicker, courses, image, reverse }) {
                     <div className="text-[12px] text-[#161616]/55 mt-1">{c.subtitle} • {c.duration}</div>
                   </div>
                   <div className="text-right shrink-0">
-                    <div className="font-canela text-[26px] md:text-[34px] text-[#161616] leading-none">£{c.price}</div>
-                    {c.save && <div className="text-[10px] tracking-[0.2em] uppercase text-[#B08968] mt-1">Save £{c.save}</div>}
+                    <div className="font-canela text-[22px] md:text-[26px] text-[#161616] leading-none">£{c.priceWithoutKit}</div>
+                    <div className="text-[9px] tracking-[0.22em] uppercase text-[#8A8A8A] mt-1">Without kit</div>
+                    <div className="font-canela text-[18px] md:text-[22px] text-[#B08968] leading-none mt-2">£{c.priceWithKit}</div>
+                    <div className="text-[9px] tracking-[0.22em] uppercase text-[#B08968] mt-1">With starter kit</div>
                   </div>
                 </div>
                 <Link

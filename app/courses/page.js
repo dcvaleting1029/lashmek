@@ -195,11 +195,17 @@ function CoursesPage() {
                 Invest in yourself. Invest in your skills. <span className="text-[#B08968]">Invest in your independence.</span>
               </motion.p>
               <p className="mt-8 text-[11px] tracking-[0.3em] uppercase text-[#161616]/60">Small class sizes • Limited availability • Secure your space today</p>
-              <Link href="/#book" data-cursor="Book" className="btn-lux btn-primary mt-10">
-                <span className="btn-fill" />
-                <span>Secure Your Space</span>
-                <ArrowUpRight size={16} />
-              </Link>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <Link href="/#book" data-cursor="Book" className="btn-lux btn-primary">
+                  <span className="btn-fill" />
+                  <span>Secure Your Space</span>
+                  <ArrowUpRight size={16} />
+                </Link>
+                <Link href="/academy/reviews" data-cursor="Read" className="btn-lux btn-outline">
+                  <span className="btn-fill" />
+                  <span>Read Student Reviews</span>
+                </Link>
+              </div>
             </div>
           </div>
         </section>

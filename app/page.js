@@ -84,7 +84,7 @@ const TESTIMONIALS = [
 const FAQS = [
   { q: 'Where is the studio located?', a: 'LashMeK&Co is based in the heart of Edinburgh in a private appointment-only suite. Full address shared upon booking.' },
   { q: 'How do I book a consultation?', a: 'All new aesthetic clients begin with a complimentary consultation. Book directly online or via WhatsApp for a tailored discovery call.' },
-  { q: 'Do you offer training and certification?', a: 'Yes. Our Academy delivers accredited education across lashes, brows and aesthetics with one-to-one mentorship and ongoing support.' },
+  { q: 'Do you offer training and certification?', a: 'Yes. Our Academy delivers accredited education across lashes and brows with one-to-one mentorship and ongoing support.' },
   { q: 'What is your aftercare process?', a: 'Every client receives a luxury aftercare kit and a personalised digital aftercare guide tailored to their treatment.' },
   { q: 'Do you offer gift cards?', a: 'Yes — beautifully presented physical and digital gift cards are available across all services and academy courses.' }
 ]

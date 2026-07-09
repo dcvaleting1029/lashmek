@@ -147,8 +147,8 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-[#161616] text-[#F8F5F2] pt-20 pb-10">
       <div className="max-w-[1500px] mx-auto px-6 md:px-10">
-        <div className="grid md:grid-cols-12 gap-10 pb-16 border-b border-[#C9A88D]/20">
-          <div className="md:col-span-5">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 pb-16 border-b border-[#C9A88D]/20">
+          <div className="md:col-span-4">
             <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-16 md:h-20 w-auto" style={{ filter: 'invert(1)' }} />
             <p className="mt-6 text-[15px] text-[#F8F5F2]/65 max-w-sm">A luxury beauty clinic in the heart of Edinburgh — treatments, aesthetics and academy.</p>
           </div>
@@ -156,9 +156,9 @@ export function Footer() {
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Studio</div>
             <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">143 Gilmore Pl<br />Edinburgh EH3 9PW<br />United Kingdom<br />By Appointment Only</p>
           </div>
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Contact</div>
-            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">lmkacademy@outlook.com<br />+44 7494 075119</p>
+            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70 break-words">lmkacademy@outlook.com<br />+44 7494 075119</p>
           </div>
           <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Follow</div>

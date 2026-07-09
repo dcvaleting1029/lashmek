@@ -18,20 +18,9 @@ function CourseGroup({ heading, kicker, courses, image, reverse }) {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1.2, ease: [0.2, 0.7, 0.2, 1] }}
-          className="lg:col-span-6 relative aspect-[4/5] rounded-[20px] overflow-hidden"
+          className="lg:col-span-6 relative aspect-[3/4] rounded-[20px] overflow-hidden"
         >
-          <img src={image} alt={heading} className="absolute inset-0 w-full h-full object-cover grayscale" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#161616]/35 via-transparent to-[#161616]/15" />
-          <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
-            <div className="text-[10px] tracking-[0.32em] uppercase text-white/90">{kicker}</div>
-            <div className="text-[10px] tracking-[0.32em] uppercase text-white/90">LMK Academy</div>
-          </div>
-          <div className="absolute bottom-8 left-8 right-8">
-            <h3 className="font-canela font-bold uppercase text-[44px] md:text-[72px] leading-[0.95] tracking-[-0.02em] text-white">
-              {heading.split(' ')[0]}
-              <span className="block italic font-medium text-[#C9A88D] text-[28px] md:text-[42px] mt-1">{heading.split(' ').slice(1).join(' ')}</span>
-            </h3>
-          </div>
+          <img src={image} alt={heading} className="absolute inset-0 w-full h-full object-cover" />
         </motion.div>
 
         <div className="lg:col-span-6">

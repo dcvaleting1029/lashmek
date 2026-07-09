@@ -86,7 +86,7 @@ function AcademyReviewsPage() {
                 <span>Browse Courses</span>
                 <ArrowUpRight size={16} />
               </Link>
-              <a href="mailto:kirimaa@icloud.com" data-cursor="Enquire" className="btn-lux btn-outline">
+              <a href="mailto:lmkacademy@outlook.com" data-cursor="Enquire" className="btn-lux btn-outline">
                 <span className="btn-fill" />
                 <span>Enquire</span>
               </a>

@@ -962,7 +962,7 @@ function Footer() {
           </div>
           <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Contact</div>
-            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">kirimaa@icloud.com<br />+44 7494 075119</p>
+            <p className="text-sm leading-[1.9] text-[#F8F5F2]/70">lmkacademy@outlook.com<br />+44 7494 075119</p>
           </div>
           <div className="md:col-span-2">
             <div className="text-[10px] tracking-[0.3em] uppercase text-[#C9A88D] mb-5">Follow</div>

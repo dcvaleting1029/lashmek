@@ -96,7 +96,7 @@ function CourseDetailPage() {
                 <span>Enrol now</span>
                 <ArrowUpRight size={16} />
               </a>
-              <a href="mailto:kirimaa@icloud.com" data-cursor="Enquire" className="btn-lux btn-light !border-[#C9A88D] !text-[#C9A88D]">
+              <a href="mailto:lmkacademy@outlook.com" data-cursor="Enquire" className="btn-lux btn-light !border-[#C9A88D] !text-[#C9A88D]">
                 <span className="btn-fill" />
                 <span>Enquire</span>
               </a>
@@ -188,12 +188,12 @@ function CourseDetailPage() {
               Small class sizes. Limited availability. Secure your space with a deposit today and begin your journey with LMK Academy.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a href="mailto:kirimaa@icloud.com?subject=Course Enquiry" data-cursor="Book" className="btn-lux btn-primary">
+              <a href="mailto:lmkacademy@outlook.com?subject=Course Enquiry" data-cursor="Book" className="btn-lux btn-primary">
                 <span className="btn-fill" />
                 <span>Reserve with Deposit</span>
                 <ArrowUpRight size={16} />
               </a>
-              <a href="mailto:kirimaa@icloud.com" data-cursor="Enquire" className="btn-lux btn-outline">
+              <a href="mailto:lmkacademy@outlook.com" data-cursor="Enquire" className="btn-lux btn-outline">
                 <span className="btn-fill" />
                 <span>Enquire</span>
               </a>

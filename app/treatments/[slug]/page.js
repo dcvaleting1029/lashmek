@@ -66,7 +66,7 @@ function TreatmentPage() {
                 <span>Book on Fresha</span>
                 <ArrowUpRight size={16} />
               </a>
-              <a href="mailto:kirimaa@icloud.com" data-cursor="Enquire" className="btn-lux btn-light !border-[#C9A88D] !text-[#C9A88D]">
+              <a href="mailto:lmkacademy@outlook.com" data-cursor="Enquire" className="btn-lux btn-light !border-[#C9A88D] !text-[#C9A88D]">
                 <span className="btn-fill" />
                 <span>Enquire</span>
               </a>
@@ -231,7 +231,7 @@ function TreatmentPage() {
                 <span>Book on Fresha</span>
                 <ArrowUpRight size={16} />
               </a>
-              <a href="mailto:kirimaa@icloud.com" data-cursor="Enquire" className="btn-lux btn-outline">
+              <a href="mailto:lmkacademy@outlook.com" data-cursor="Enquire" className="btn-lux btn-outline">
                 <span className="btn-fill" />
                 <span>Enquire</span>
               </a>

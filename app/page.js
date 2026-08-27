@@ -759,8 +759,7 @@ function Testimonials() {
 function Academy() {
   const cards = [
     { title: 'Foundation Lash', desc: '4-day intensive in classic lash artistry with one-to-one mentorship.', img: IMG.lash3 },
-    { title: 'Advanced Volume', desc: 'Master Russian volume techniques, mapping & retention science.', img: IMG.lash4 },
-    { title: 'Aesthetic Masterclass', desc: 'Lip enhancement, anatomy and advanced injection techniques.', img: IMG.lip2 }
+    { title: 'Advanced Volume', desc: 'Master Russian volume techniques, mapping & retention science.', img: IMG.lash4 }
   ]
   return (
     <section id="academy" className="bg-[#161616] text-[#F8F5F2] py-28 md:py-36 relative overflow-hidden">
@@ -779,7 +778,7 @@ function Academy() {
             Where the next generation of luxury beauty professionals are shaped. Accredited, intimate cohorts, lifetime mentorship.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-[1100px] mx-auto">
           {cards.map((c, i) => (
             <motion.div
               key={i}

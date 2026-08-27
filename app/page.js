@@ -22,7 +22,7 @@ const IMG = {
   lash1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
   lash2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/acuiurcs_f0757d96-9e0f-411b-9043-5e8eef7cd0f5.jpg',
   lash3: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/cuy7pnvq_IMG_4523.jpg',
-  lash4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1aopwdgc_IMG_4521.jpg',
+  lash4: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/acuiurcs_f0757d96-9e0f-411b-9043-5e8eef7cd0f5.jpg',
   lash5: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1rhavp2k_IMG_4522.jpg',
   lip1: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/xw3hscey_WhatsApp%20Image%202026-02-24%20at%2021.52.54.jpeg',
   lip2: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/w6o9qvyz_WhatsApp%20Image%202026-02-24%20at%2021.52.50.jpeg',

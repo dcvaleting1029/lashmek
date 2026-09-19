@@ -96,7 +96,7 @@ function CoursesPage() {
               <span className="block overflow-hidden"><SplitReveal delay={0.3}>Courses</SplitReveal></span>
             </h1>
             <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }} className="mt-8 max-w-xl text-[15px] md:text-[16px] text-[#161616]/70 leading-[1.8]">
-              Full-stack accredited courses that give you the knowledge, skill and credibility to grow your personal brand and business in lashes & brows.
+              LMK Academy courses are fully accredited by Beauty Industry Approval, allowing successful students to obtain appropriate insurance and begin offering their treatments professionally.
             </motion.p>
           </div>
         </section>

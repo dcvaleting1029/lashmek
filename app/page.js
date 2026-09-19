@@ -775,7 +775,7 @@ function Academy() {
             </h2>
           </div>
           <p className="text-[15px] leading-[1.8] text-[#F8F5F2]/70 max-w-md">
-            Where the next generation of luxury beauty professionals are shaped. Accredited, intimate cohorts, lifetime mentorship.
+            LMK Academy courses are fully accredited by Beauty Industry Approval, allowing successful students to obtain appropriate insurance and begin offering their treatments professionally.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 max-w-[1100px] mx-auto">

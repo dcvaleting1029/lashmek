@@ -1,11 +1,12 @@
-const BASE_TITLE = 'Lash Extensions Edinburgh | Brows, Aesthetics & SPMU | LashMeK & Co'
-const DESCRIPTION = 'Professional lash extensions, brow treatments, lash lifts, aesthetics and semi-permanent makeup in Edinburgh. Experienced beauty specialists helping you look and feel your best. Book online today.'
+const TITLE = 'LMK Academy | Accredited Lash & Brow Training Courses in Edinburgh'
+const DESCRIPTION = 'Accredited lash & brow training in Edinburgh with LMK Academy — classic lashes, lash lifts, brow lamination and wax & tint. Small classes, live models & lifetime mentorship from Kirima.'
 
 export const metadata = {
-  title: `${BASE_TITLE} | Academy`,
+  title: TITLE,
   description: DESCRIPTION,
+  keywords: 'lash academy Edinburgh, brow training Edinburgh, lash training courses Edinburgh, accredited beauty course, classic lash course, lash lift course, brow lamination course, LMK Academy',
   openGraph: {
-    title: `${BASE_TITLE} | Academy`,
+    title: TITLE,
     description: DESCRIPTION,
     type: 'website'
   }

@@ -1,16 +1,19 @@
 import { TREATMENTS_DATA } from '@/lib/treatments'
 
-const BASE_TITLE = 'Lash Extensions Edinburgh | Brows, Aesthetics & SPMU | LashMeK & Co'
-const DESCRIPTION = 'Professional lash extensions, brow treatments, lash lifts, aesthetics and semi-permanent makeup in Edinburgh. Experienced beauty specialists helping you look and feel your best. Book online today.'
-
 export async function generateMetadata({ params }) {
   const t = TREATMENTS_DATA.find(x => x.slug === params?.slug)
-  const name = t ? t.title : 'Treatment'
-  const title = `${BASE_TITLE} | ${name}`
+  if (!t) {
+    return {
+      title: 'Treatments | LashMeK&Co Luxury Beauty Clinic Edinburgh',
+      description: "Edinburgh's luxury beauty clinic — lash extensions, brows, lash lifts and lip enhancements by LashMeK&Co. Book online today."
+    }
+  }
+  const title = `${t.title} Edinburgh | LashMeK&Co Luxury Beauty Clinic`
+  const description = `${t.tagline} Book bespoke ${t.title.toLowerCase()} in Edinburgh with LashMeK&Co — precision beauty, hand-mapped to you. Book online via Fresha.`
   return {
     title,
-    description: DESCRIPTION,
-    openGraph: { title, description: DESCRIPTION, type: 'website' }
+    description,
+    openGraph: { title, description, type: 'website' }
   }
 }
 

@@ -82,7 +82,7 @@ const TESTIMONIALS = [
 ]
 
 const FAQS = [
-  { q: 'Where is the studio located?', a: 'LashMeK&Co is based in the heart of Edinburgh in a private appointment-only suite. Full address shared upon booking.' },
+  { q: 'Where is the studio located?', a: 'LASHMEK&CO. is based in the heart of Edinburgh in a private appointment-only suite. Full address shared upon booking.' },
   { q: 'How do I book a consultation?', a: 'All new aesthetic clients begin with a complimentary consultation. Book directly online or via WhatsApp for a tailored discovery call.' },
   { q: 'Do you offer training and certification?', a: 'Yes. Our Academy delivers accredited education across lashes and brows with one-to-one mentorship and ongoing support.' },
   { q: 'What is your aftercare process?', a: 'Every client receives a luxury aftercare kit and a personalised digital aftercare guide tailored to their treatment.' },
@@ -119,7 +119,7 @@ function Loader({ done }) {
             >
               <img
                 src={LOGO_NAV_URL}
-                alt="LashMeK&Co. Beauty Clinic"
+                alt="LASHMEK&CO. Beauty Clinic"
                 className="w-[300px] md:w-[400px] h-auto"
                 style={{ filter: 'invert(1)' }}
               />
@@ -200,7 +200,7 @@ function Nav() {
     <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${scrolled ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
         <a href="#" data-cursor="Home" className="flex items-center gap-3 group">
-          <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-12 md:h-14 w-auto" />
+          <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-10">
           {NAV.map((n) => (
@@ -534,7 +534,7 @@ function Founder() {
             About <span className="italic font-medium text-[#B08968]">Kirima</span>
           </motion.h2>
           <p className="mt-8 text-[15px] leading-[1.8] text-[#161616]/75 max-w-md">
-            For over seven years, Kirima has been refining the art of natural enhancement — building LashMeK&Co into one of Edinburgh's most respected names in luxury aesthetics, lashes and education.
+            For over seven years, Kirima has been refining the art of natural enhancement — building LASHMEK&CO. into one of Edinburgh's most respected names in luxury aesthetics, lashes and education.
           </p>
           <p className="mt-5 text-[15px] leading-[1.8] text-[#161616]/75 max-w-md">
             Every treatment is approached with the patience of a sculptor and the eye of an editor — quietly luxurious, deeply considered, always elevated.
@@ -694,7 +694,7 @@ function VideoSection() {
         <h2 className="mt-10 font-canela font-bold uppercase text-[38px] md:text-[78px] text-[#F8F5F2] leading-[1] tracking-[-0.02em] max-w-4xl">
           Luxury in <span className="italic font-medium text-[#C9A88D]">every</span> detail.
         </h2>
-        <div className="mt-6 text-[11px] tracking-[0.3em] uppercase text-[#C9A88D]">LashMeK&Co — A Beauty Film</div>
+        <div className="mt-6 text-[11px] tracking-[0.3em] uppercase text-[#C9A88D]">LASHMEK&CO. — A Beauty Film</div>
       </div>
     </section>
   )
@@ -739,7 +739,7 @@ function Testimonials() {
                 </div>
                 <div className="flex items-center gap-4 mt-6 pt-6 border-t border-[#C9A88D]/20">
                   <div className="w-14 h-14 rounded-full overflow-hidden bg-[#F8F5F2] flex items-center justify-center shrink-0 ring-1 ring-[#C9A88D]/30">
-                    <img src={LOGO_URL} alt="LashMeK&Co. Beauty Clinic" className="w-full h-full object-contain p-1.5" />
+                    <img src={LOGO_URL} alt="LASHMEK&CO. Beauty Clinic" className="w-full h-full object-contain p-1.5" />
                   </div>
                   <div>
                     <div className="text-sm text-[#F8F5F2]">{t.name}</div>
@@ -952,7 +952,7 @@ function Footer() {
       <div className="max-w-[1500px] mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-8 md:gap-10 pb-16 border-b border-[#C9A88D]/20">
           <div className="md:col-span-4">
-            <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-16 md:h-20 w-auto" style={{ filter: 'invert(1)' }} />
+            <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-16 md:h-20 w-auto" style={{ filter: 'invert(1)' }} />
             <p className="mt-6 text-[15px] text-[#F8F5F2]/65 max-w-sm">A luxury beauty clinic in the heart of Edinburgh — treatments, aesthetics and academy.</p>
           </div>
           <div className="md:col-span-3">
@@ -972,7 +972,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 pt-8 text-[11px] tracking-[0.2em] uppercase text-[#F8F5F2]/40">
-          <span>© 2025 LashMeK&Co — All rights reserved</span>
+          <span>© 2025 LASHMEK&CO. — All rights reserved</span>
           <span>Designed By <a href="https://jayalminshawi.com/" target="_blank" rel="noopener noreferrer" className="lux-underline text-[#C9A88D] hover:text-[#F8F5F2] transition-colors">Jay Alminshawi</a></span>
         </div>
       </div>

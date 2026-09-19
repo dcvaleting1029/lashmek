@@ -53,7 +53,7 @@ function TreatmentPage() {
             <div className="flex items-center gap-4 mb-6">
               <span className="text-[10px] tracking-[0.32em] uppercase text-[#C9A88D]">{treatment.n}</span>
               <span className="w-10 h-px bg-[#C9A88D]" />
-              <span className="text-[10px] tracking-[0.32em] uppercase text-[#F8F5F2]/70">LashMeK&Co. Beauty Clinic</span>
+              <span className="text-[10px] tracking-[0.32em] uppercase text-[#F8F5F2]/70">LASHMEK&CO. Beauty Clinic</span>
             </div>
             <h1 className="font-canela font-bold uppercase text-[clamp(46px,11vw,180px)] leading-[0.92] tracking-[-0.03em] max-w-5xl">
               {treatment.title}
@@ -141,7 +141,7 @@ function TreatmentPage() {
                   Real <span className="italic font-medium text-[#B08968]">results</span>
                 </h2>
               </div>
-              <p className="text-[14px] text-[#161616]/60 max-w-xs">Every result, handcrafted in studio by LashMeK&Co.</p>
+              <p className="text-[14px] text-[#161616]/60 max-w-xs">Every result, handcrafted in studio by LASHMEK&CO.</p>
             </div>
             {treatment.gallery.length > 0 ? (
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] md:auto-rows-[260px] gap-3 md:gap-4">

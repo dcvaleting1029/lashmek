@@ -4,7 +4,7 @@ const DESCRIPTION = 'Read verified student reviews of LMK Academy in Edinburgh. 
 export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  keywords: 'LMK Academy reviews, lash academy Edinburgh reviews, brow training reviews, lash training testimonials Edinburgh, LashMeK&Co Academy',
+  keywords: 'LMK Academy reviews, lash academy Edinburgh reviews, brow training reviews, lash training testimonials Edinburgh, LASHMEK&CO. Academy',
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

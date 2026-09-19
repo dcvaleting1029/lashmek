@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
       description: 'Accredited lash & brow training in Edinburgh with LMK Academy. Small classes, live model practice and lifetime mentorship from Kirima.'
     }
   }
-  const title = `${course.title} Course Edinburgh | LMK Academy | LashMeK&Co`
+  const title = `${course.title} Course Edinburgh | LMK Academy | LASHMEK&CO.`
   const description = `Accredited ${course.title} training in Edinburgh with LMK Academy — ${course.duration.toLowerCase()} hands-on course with live model, digital manual, certification and lifetime mentorship from Kirima.`
   return {
     title,

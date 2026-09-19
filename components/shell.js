@@ -51,7 +51,7 @@ export function Loader({ done }) {
             >
               <img
                 src={LOGO_NAV_URL}
-                alt="LashMeK&Co. Beauty Clinic"
+                alt="LASHMEK&CO. Beauty Clinic"
                 className="w-[300px] md:w-[400px] h-auto"
                 style={{ filter: 'invert(1)' }}
               />
@@ -126,7 +126,7 @@ export function Nav({ variant = 'auto' }) {
     <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${solid ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
         <Link href="/" data-cursor="Home" className="flex items-center gap-3 group">
-          <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-12 md:h-14 w-auto" />
+          <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((n) => (
@@ -149,7 +149,7 @@ export function Footer() {
       <div className="max-w-[1500px] mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-8 md:gap-10 pb-16 border-b border-[#C9A88D]/20">
           <div className="md:col-span-4">
-            <img src={LOGO_NAV_URL} alt="LashMeK&Co. Beauty Clinic" className="h-16 md:h-20 w-auto" style={{ filter: 'invert(1)' }} />
+            <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-16 md:h-20 w-auto" style={{ filter: 'invert(1)' }} />
             <p className="mt-6 text-[15px] text-[#F8F5F2]/65 max-w-sm">A luxury beauty clinic in the heart of Edinburgh — treatments, aesthetics and academy.</p>
           </div>
           <div className="md:col-span-3">
@@ -169,7 +169,7 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-4 pt-8 text-[11px] tracking-[0.2em] uppercase text-[#F8F5F2]/40">
-          <span>© 2025 LashMeK&Co — All rights reserved</span>
+          <span>© 2025 LASHMEK&CO. — All rights reserved</span>
           <span>Designed By <a href="https://jayalminshawi.com/" target="_blank" rel="noopener noreferrer" className="lux-underline text-[#C9A88D] hover:text-[#F8F5F2] transition-colors">Jay Alminshawi</a></span>
         </div>
       </div>

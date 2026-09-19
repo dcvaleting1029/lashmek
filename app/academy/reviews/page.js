@@ -49,7 +49,7 @@ function AcademyReviewsPage() {
                   <Quote className="absolute top-6 right-6 text-[#C9A88D]/30" size={40} />
                   <div className="flex items-center gap-4 mb-5">
                     <div className="w-14 h-14 rounded-full overflow-hidden bg-[#F8F5F2] flex items-center justify-center shrink-0 ring-1 ring-[#C9A88D]/30">
-                      <img src={LOGO_URL} alt="LashMeK&Co." className="w-full h-full object-contain p-1.5" />
+                      <img src={LOGO_URL} alt="LASHMEK&CO." className="w-full h-full object-contain p-1.5" />
                     </div>
                     <div>
                       <div className="font-canela text-lg text-[#161616]">{r.name}</div>

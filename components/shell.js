@@ -13,6 +13,7 @@ export const BOOKING_URL = 'https://www.fresha.com/en-GB/a/lashmek-edinburgh-uk-
 export const NAV_LINKS = [
   { label: 'Treatments', href: '/#treatments' },
   { label: 'Academy', href: '/courses' },
+  { label: 'Enquire', href: '/enquire' },
   { label: 'Results', href: '/#results' },
   { label: 'About', href: '/#about' },
   { label: 'Contact', href: '/#contact' }

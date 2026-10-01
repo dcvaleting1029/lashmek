@@ -2,9 +2,10 @@
 
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Check, MessageCircle, Star } from 'lucide-react'
+import { ArrowUpRight, Check, MessageCircle, Star, Calendar } from 'lucide-react'
 import { Nav, Footer, Cursor, Loader, useLenis } from '@/components/shell'
 import { STUDENT_REVIEWS } from '@/lib/academy-reviews'
+import { COHORT_DATES } from '@/lib/course-dates'
 import { useState } from 'react'
 
 const WHATSAPP_NUMBER = '447494075119'
@@ -208,6 +209,15 @@ function EnquirePage() {
                 <span className="btn-fill" />
                 <span>View Pathways</span>
               </a>
+              <a
+                href="#dates"
+                data-cursor="Dates"
+                className="btn-lux btn-outline !border-[#F8F5F2] !text-[#F8F5F2]"
+              >
+                <span className="btn-fill" />
+                <Calendar size={14} />
+                <span>Upcoming Dates</span>
+              </a>
             </motion.div>
           </div>
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.3em] uppercase text-[#F8F5F2]/60 flex items-center gap-3">
@@ -236,6 +246,85 @@ function EnquirePage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {PATHWAYS.map((p, i) => <PathwayCard key={p.key} p={p} i={i} />)}
+            </div>
+          </div>
+        </section>
+
+        {/* UPCOMING DATES */}
+        <section id="dates" className="py-24 md:py-32 bg-[#E9DED3]">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+            <div className="flex items-end justify-between gap-6 flex-wrap mb-14">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-10 h-px bg-[#B08968]" />
+                  <span className="text-[10px] tracking-[0.32em] uppercase text-[#161616]/70">Upcoming Cohorts</span>
+                </div>
+                <h2 className="font-canela font-bold uppercase text-[32px] md:text-[56px] leading-[1.02] tracking-[-0.02em]">
+                  Next Course <span className="italic font-medium text-[#B08968]">Dates.</span>
+                </h2>
+              </div>
+              <p className="text-[14px] text-[#161616]/60 max-w-sm leading-[1.7]">
+                Tap any date to enquire about that specific cohort — Kirima will reply personally on WhatsApp with availability.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              {[
+                { key: 'lash', title: 'Lash Training', data: COHORT_DATES.lash },
+                { key: 'brow', title: 'Brow Training', data: COHORT_DATES.brow }
+              ].map((col, ci) => (
+                <motion.div
+                  key={col.key}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.8, delay: ci * 0.1 }}
+                  className="bg-[#F8F5F2] rounded-[20px] p-7 md:p-9 border border-[#C9A88D]/20"
+                >
+                  <div className="flex items-center gap-3 mb-6 pb-6 border-b border-[#C9A88D]/20">
+                    <Calendar size={16} className="text-[#B08968]" />
+                    <div className="text-[10px] tracking-[0.3em] uppercase text-[#8A8A8A]">{col.title}</div>
+                  </div>
+                  <div className="space-y-7">
+                    {col.data.map((c) => (
+                      <div key={c.course}>
+                        <div className="flex items-baseline justify-between gap-4 mb-3">
+                          <div className="font-canela text-[22px] md:text-[24px] text-[#161616] leading-tight">{c.course}</div>
+                          <div className="text-[10px] tracking-[0.25em] uppercase text-[#8A8A8A] shrink-0">{c.duration}</div>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {c.dates.map((d) => (
+                            <a
+                              key={d}
+                              href={waLink(`Hi Kirima, I'd love to enquire about the ${c.course} course on ${d}. Is it still available?`)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-cursor="Enquire"
+                              className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[#C9A88D]/40 text-[12px] tracking-[0.08em] text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616] transition-all duration-300"
+                            >
+                              <span>{d}</span>
+                              <ArrowUpRight size={12} className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-10 flex items-center justify-center gap-3 text-[11px] tracking-[0.25em] uppercase text-[#161616]/60">
+              <span>Don't see a date that works?</span>
+              <a
+                href={waLink("Hi Kirima, the current cohort dates don't suit me — could we arrange an alternative?")}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="Enquire"
+                className="lux-underline text-[#B08968]"
+              >
+                Message Kirima
+              </a>
             </div>
           </div>
         </section>

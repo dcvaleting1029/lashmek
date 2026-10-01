@@ -94,8 +94,7 @@ const NAV = [
   { label: 'Academy', href: '/courses' },
   { label: 'Enquire', href: '/enquire' },
   { label: 'Results', href: '#results' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' }
+  { label: 'About', href: '#about' }
 ]
 
 /* ============ COMPONENTS ============ */

@@ -15,8 +15,7 @@ export const NAV_LINKS = [
   { label: 'Academy', href: '/courses' },
   { label: 'Enquire', href: '/enquire' },
   { label: 'Results', href: '/#results' },
-  { label: 'About', href: '/#about' },
-  { label: 'Contact', href: '/#contact' }
+  { label: 'About', href: '/#about' }
 ]
 
 export function SplitReveal({ children, delay = 0, className = '' }) {

@@ -98,11 +98,22 @@ function CoursesPage() {
             <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }} className="mt-8 max-w-xl text-[15px] md:text-[16px] text-[#161616]/70 leading-[1.8]">
               LMK Academy courses are fully accredited by Beauty Industry Approval, allowing successful students to obtain appropriate insurance and begin offering their treatments professionally.
             </motion.p>
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="mt-10 flex flex-wrap items-center gap-4">
+              <Link href="/enquire" data-cursor="Enquire" className="btn-lux btn-primary">
+                <span className="btn-fill" />
+                <span>Enquire Now</span>
+                <ArrowUpRight size={14} />
+              </Link>
+              <a href="#programme" data-cursor="Explore" className="btn-lux btn-outline">
+                <span className="btn-fill" />
+                <span>Explore Courses</span>
+              </a>
+            </motion.div>
           </div>
         </section>
 
         {/* INTRO */}
-        <section className="bg-[#F8F5F2] py-24 md:py-32">
+        <section id="programme" className="bg-[#F8F5F2] py-24 md:py-32">
           <div className="max-w-[1000px] mx-auto px-6 md:px-10 text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="w-10 h-px bg-[#C9A88D]" />

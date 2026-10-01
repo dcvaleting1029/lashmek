@@ -9,7 +9,7 @@ import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
 import 'swiper/css/free-mode'
-import { MobileMenu } from '@/components/shell'
+import { MobileMenu, MorphingMenuIcon } from '@/components/shell'
 
 /* ============ ASSETS ============ */
 const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
@@ -200,10 +200,10 @@ function Nav() {
   }, [])
   return (
     <>
-    <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${scrolled ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${menuOpen ? 'z-[200] py-6 bg-transparent' : `z-[80] ${scrolled ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
-        <a href="#" data-cursor="Home" className="flex items-center gap-3 group">
-          <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto" />
+        <a href="#" data-cursor="Home" className="flex items-center gap-3 group" onClick={() => menuOpen && setMenuOpen(false)}>
+          <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto transition-[filter] duration-300" style={{ filter: menuOpen ? 'invert(1)' : 'none' }} />
         </a>
         <nav className="hidden md:flex items-center gap-10">
           {NAV.map((n) => (
@@ -216,11 +216,12 @@ function Nav() {
           <ArrowUpRight size={14} />
         </a>
         <button
-          aria-label="Open menu"
-          onClick={() => setMenuOpen(true)}
-          className="md:hidden w-11 h-11 rounded-full border border-[#161616]/25 flex items-center justify-center text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616] transition-colors"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
+          className={`md:hidden w-11 h-11 rounded-full border flex items-center justify-center transition-colors duration-300 ${menuOpen ? 'border-[#C9A88D]/50 text-[#F8F5F2] hover:bg-[#C9A88D]/15' : 'border-[#161616]/25 text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616]'}`}
         >
-          <Menu size={18} />
+          <MorphingMenuIcon open={menuOpen} />
         </button>
       </div>
     </header>

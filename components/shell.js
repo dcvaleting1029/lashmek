@@ -113,6 +113,32 @@ export function Cursor() {
   )
 }
 
+export function MorphingMenuIcon({ open, size = 20 }) {
+  const t = { duration: 0.5, ease: [0.22, 1, 0.36, 1] }
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" style={{ overflow: 'visible' }}>
+      <motion.rect
+        x="3" width="18" height="2" rx="1" fill="currentColor"
+        animate={open ? { y: 11, rotate: 45 } : { y: 6, rotate: 0 }}
+        style={{ transformOrigin: '12px 12px' }}
+        transition={t}
+      />
+      <motion.rect
+        x="3" width="18" height="2" rx="1" y="11" fill="currentColor"
+        animate={open ? { opacity: 0, scale: 0.6 } : { opacity: 1, scale: 1 }}
+        style={{ transformOrigin: '12px 12px' }}
+        transition={{ duration: 0.25 }}
+      />
+      <motion.rect
+        x="3" width="18" height="2" rx="1" fill="currentColor"
+        animate={open ? { y: 11, rotate: -45 } : { y: 16, rotate: 0 }}
+        style={{ transformOrigin: '12px 12px' }}
+        transition={t}
+      />
+    </svg>
+  )
+}
+
 export function MobileMenu({ open, onClose, links = NAV_LINKS }) {
   useEffect(() => {
     if (open) {
@@ -154,22 +180,10 @@ export function MobileMenu({ open, onClose, links = NAV_LINKS }) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative h-full w-full flex flex-col px-6 pt-6 pb-10"
+            className="relative h-full w-full flex flex-col px-6 pt-28 pb-10"
           >
-            {/* Top bar: logo + close */}
-            <div className="flex items-center justify-between">
-              <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 w-auto" style={{ filter: 'invert(1)' }} />
-              <button
-                aria-label="Close menu"
-                onClick={onClose}
-                className="w-11 h-11 rounded-full border border-[#C9A88D]/40 flex items-center justify-center text-[#F8F5F2] hover:bg-[#C9A88D]/15 transition-colors"
-              >
-                <X size={18} />
-              </button>
-            </div>
-
             {/* Nav links */}
-            <nav className="flex-1 flex flex-col justify-center gap-5 -mt-6">
+            <nav className="flex-1 flex flex-col justify-center gap-5">
               {links.map((n, i) => (
                 <motion.div
                   key={n.label}
@@ -232,10 +246,10 @@ export function Nav({ variant = 'auto' }) {
   const solid = variant === 'solid' || scrolled
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${solid ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
+      <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${menuOpen ? 'z-[200] py-6 bg-transparent' : `z-[80] ${solid ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}`}>
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
-          <Link href="/" data-cursor="Home" className="flex items-center gap-3 group">
-            <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto" />
+          <Link href="/" data-cursor="Home" className="flex items-center gap-3 group" onClick={() => menuOpen && setMenuOpen(false)}>
+            <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto transition-[filter] duration-300" style={{ filter: menuOpen ? 'invert(1)' : 'none' }} />
           </Link>
           <nav className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((n) => (
@@ -247,13 +261,14 @@ export function Nav({ variant = 'auto' }) {
             <span>Book</span>
             <ArrowUpRight size={14} />
           </a>
-          {/* Hamburger (mobile only) */}
+          {/* Morphing hamburger / X toggle (mobile only) */}
           <button
-            aria-label="Open menu"
-            onClick={() => setMenuOpen(true)}
-            className="md:hidden w-11 h-11 rounded-full border border-[#161616]/25 flex items-center justify-center text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616] transition-colors"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`md:hidden w-11 h-11 rounded-full border flex items-center justify-center transition-colors duration-300 ${menuOpen ? 'border-[#C9A88D]/50 text-[#F8F5F2] hover:bg-[#C9A88D]/15' : 'border-[#161616]/25 text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616]'}`}
           >
-            <Menu size={18} />
+            <MorphingMenuIcon open={menuOpen} />
           </button>
         </div>
       </header>

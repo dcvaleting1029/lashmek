@@ -19,7 +19,7 @@ const PATHWAYS = [
     kicker: 'Pathway One',
     title: 'Lash Training',
     tagline: 'Classic Extensions, Lash Lift and the full Lash Specialist Bundle.',
-    img: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
+    img: 'https://customer-assets-7cd3h4nn.emergentagent.net/job_lashme-refined/artifacts/9ul407ue_97b3ca48-e519-45fc-8ef9-fe705a2bb40f.jpeg',
     courses: [
       { name: 'Classic Lash Extensions', duration: '2 Days', from: 500 },
       { name: 'Lash Lift', duration: '2 Days', from: 300 },
@@ -38,7 +38,7 @@ const PATHWAYS = [
     kicker: 'Pathway Two',
     title: 'Brow Training',
     tagline: 'Brow Wax & Tint, Lamination and the full Brow Specialist Bundle.',
-    img: 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/4u2zm95m_IMG_7339.jpg',
+    img: 'https://customer-assets-7cd3h4nn.emergentagent.net/job_lashme-refined/artifacts/xyz77ki0_3602e5bc-0467-43e0-9386-1f4ceb7ebd42.webp',
     courses: [
       { name: 'Brow Wax & Tint', duration: '1 Day', from: 220 },
       { name: 'Brow Lamination', duration: '1 Day', from: 250 },

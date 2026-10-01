@@ -55,14 +55,10 @@ const PATHWAYS = [
 ]
 
 const GALLERY = [
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/781svbcx_20fa0236-f3b8-4431-8968-6918cdbb96a0.JPG',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/4u2zm95m_IMG_7339.jpg',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/acuiurcs_f0757d96-9e0f-411b-9043-5e8eef7cd0f5.jpg',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/aihyjdjt_IMG_7341.jpg',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/3l05f8sl_18ed7d92-cadf-4f50-9e4a-b11031cf0694.JPG',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/1rhavp2k_IMG_4522.jpg',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/7zca60sz_IMG_7340.jpg',
-  'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/fxcgf4eh_8ea4a023-3443-41d6-8b02-99dad5db53b8.JPG'
+  'https://customer-assets-7cd3h4nn.emergentagent.net/job_lashme-refined/artifacts/dyjnt3ed_90b0ae0c-db3e-45a0-ab79-b1d0be74b31d.webp',
+  'https://customer-assets-7cd3h4nn.emergentagent.net/job_lashme-refined/artifacts/w7v62cnz_32b92c6f-38f0-4374-9ed0-3cd3bb659db0.webp',
+  'https://customer-assets-7cd3h4nn.emergentagent.net/job_lashme-refined/artifacts/u8zuo56s_db8a099d-f735-404e-b500-d9c79af77ba6.webp',
+  'https://customer-assets-7cd3h4nn.emergentagent.net/job_lashme-refined/artifacts/9shzblil_b0ca0cc7-020a-47d5-b1ff-961d64e32bbc.webp'
 ]
 
 const BENEFITS = [
@@ -376,7 +372,7 @@ function EnquirePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.6, delay: (i % 4) * 0.08 }}
-                  className={`relative overflow-hidden rounded-[14px] group ${i === 0 || i === 5 ? 'aspect-[3/4]' : 'aspect-square'}`}
+                  className="relative overflow-hidden rounded-[14px] group aspect-[3/4]"
                 >
                   <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-110" />
                 </motion.div>

@@ -2,13 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
-import { Plus, ArrowUpRight, Star, Instagram, Play, ChevronRight } from 'lucide-react'
+import { Plus, ArrowUpRight, Star, Instagram, Play, ChevronRight, Menu } from 'lucide-react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade, FreeMode, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/pagination'
 import 'swiper/css/free-mode'
+import { MobileMenu } from '@/components/shell'
 
 /* ============ ASSETS ============ */
 const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
@@ -191,12 +192,14 @@ function Cursor() {
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', fn)
     return () => window.removeEventListener('scroll', fn)
   }, [])
   return (
+    <>
     <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${scrolled ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
         <a href="#" data-cursor="Home" className="flex items-center gap-3 group">
@@ -207,13 +210,22 @@ function Nav() {
             <a key={n.label} href={n.href} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n.label}</a>
           ))}
         </nav>
-        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">
+        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="!hidden md:!inline-flex btn-lux btn-primary !py-3 !px-5 !text-[10px]">
           <span className="btn-fill" />
           <span>Book</span>
           <ArrowUpRight size={14} />
         </a>
+        <button
+          aria-label="Open menu"
+          onClick={() => setMenuOpen(true)}
+          className="md:hidden w-11 h-11 rounded-full border border-[#161616]/25 flex items-center justify-center text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616] transition-colors"
+        >
+          <Menu size={18} />
+        </button>
       </div>
     </header>
+    <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} links={NAV} />
+    </>
   )
 }
 

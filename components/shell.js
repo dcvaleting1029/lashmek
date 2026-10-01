@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 
 export const LOGO_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/snyl5rby_LASHMEK%26CO.%20-%20Logo.jpg'
 export const LOGO_NAV_URL = 'https://customer-assets.emergentagent.com/job_lashme-refined/artifacts/klsqu6ix_LASHMEK%26CO.%20-%20Logo%20%28Transparent%29.png'
@@ -113,8 +113,116 @@ export function Cursor() {
   )
 }
 
+export function MobileMenu({ open, onClose, links = NAV_LINKS }) {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
+  return (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.7, 0, 0.2, 1] }}
+          className="fixed inset-0 z-[150] md:hidden"
+        >
+          {/* Faded brand backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className="absolute inset-0 bg-[#161616]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-[#161616] via-[#1f1b18] to-[#161616]" />
+            <div className="absolute inset-0 opacity-40 pointer-events-none">
+              <div className="gold-blob absolute -top-20 -left-20 w-[400px] h-[400px]" />
+              <div className="gold-blob absolute bottom-0 -right-20 w-[500px] h-[500px]" />
+            </div>
+          </motion.div>
+
+          {/* Content */}
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="relative h-full w-full flex flex-col px-6 pt-6 pb-10"
+          >
+            {/* Top bar: logo + close */}
+            <div className="flex items-center justify-between">
+              <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 w-auto" style={{ filter: 'invert(1)' }} />
+              <button
+                aria-label="Close menu"
+                onClick={onClose}
+                className="w-11 h-11 rounded-full border border-[#C9A88D]/40 flex items-center justify-center text-[#F8F5F2] hover:bg-[#C9A88D]/15 transition-colors"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Nav links */}
+            <nav className="flex-1 flex flex-col justify-center gap-5 -mt-6">
+              {links.map((n, i) => (
+                <motion.div
+                  key={n.label}
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.7, delay: 0.4 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Link
+                    href={n.href}
+                    onClick={onClose}
+                    className="group flex items-baseline justify-between border-b border-[#C9A88D]/20 pb-5"
+                  >
+                    <span className="font-canela font-bold uppercase text-[36px] leading-none tracking-[-0.015em] text-[#F8F5F2] group-hover:text-[#C9A88D] transition-colors">
+                      {n.label}
+                    </span>
+                    <ArrowUpRight size={20} className="text-[#C9A88D] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+
+            {/* Book CTA at bottom */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 + links.length * 0.08 + 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-auto"
+            >
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onClose}
+                className="btn-lux btn-primary w-full justify-center !bg-[#C9A88D] !border-[#C9A88D] !text-[#161616]"
+              >
+                <span className="btn-fill" />
+                <span>Book Appointment</span>
+                <ArrowUpRight size={16} />
+              </a>
+              <div className="mt-5 text-center text-[10px] tracking-[0.3em] uppercase text-[#F8F5F2]/50">
+                +44 7494 075119 — lmkacademy@outlook.com
+              </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
+
 export function Nav({ variant = 'auto' }) {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40)
     fn()
@@ -123,23 +231,34 @@ export function Nav({ variant = 'auto' }) {
   }, [])
   const solid = variant === 'solid' || scrolled
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${solid ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
-        <Link href="/" data-cursor="Home" className="flex items-center gap-3 group">
-          <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto" />
-        </Link>
-        <nav className="hidden md:flex items-center gap-10">
-          {NAV_LINKS.map((n) => (
-            <Link key={n.label} href={n.href} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n.label}</Link>
-          ))}
-        </nav>
-        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="btn-lux btn-primary !py-3 !px-5 !text-[10px]">
-          <span className="btn-fill" />
-          <span>Book</span>
-          <ArrowUpRight size={14} />
-        </a>
-      </div>
-    </header>
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-[80] transition-all duration-500 ${solid ? 'py-4 bg-[#F8F5F2]/85 backdrop-blur-md border-b border-[#C9A88D]/20' : 'py-6 bg-transparent'}`}>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
+          <Link href="/" data-cursor="Home" className="flex items-center gap-3 group">
+            <img src={LOGO_NAV_URL} alt="LASHMEK&CO. Beauty Clinic" className="h-12 md:h-14 w-auto" />
+          </Link>
+          <nav className="hidden md:flex items-center gap-10">
+            {NAV_LINKS.map((n) => (
+              <Link key={n.label} href={n.href} data-cursor="Explore" className="lux-underline text-[11px] tracking-[0.25em] uppercase text-[#161616]/80 hover:text-[#161616]">{n.label}</Link>
+            ))}
+          </nav>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" data-cursor="Book" className="!hidden md:!inline-flex btn-lux btn-primary !py-3 !px-5 !text-[10px]">
+            <span className="btn-fill" />
+            <span>Book</span>
+            <ArrowUpRight size={14} />
+          </a>
+          {/* Hamburger (mobile only) */}
+          <button
+            aria-label="Open menu"
+            onClick={() => setMenuOpen(true)}
+            className="md:hidden w-11 h-11 rounded-full border border-[#161616]/25 flex items-center justify-center text-[#161616] hover:bg-[#161616] hover:text-[#F8F5F2] hover:border-[#161616] transition-colors"
+          >
+            <Menu size={18} />
+          </button>
+        </div>
+      </header>
+      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+    </>
   )
 }
 

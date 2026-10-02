@@ -93,7 +93,7 @@ const FAQS = [
 const NAV = [
   { label: 'Treatments', href: '#treatments' },
   { label: 'Academy', href: '/courses' },
-  { label: 'Enquire', href: '/enquire' },
+  { label: 'Enroll', href: '/enquire' },
   { label: 'Results', href: '#results' },
   { label: 'About', href: '#about' }
 ]
